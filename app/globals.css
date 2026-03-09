@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --product-gradient: linear-gradient(135deg, #8D6E63 0%, #5D4037 100%);
+}
+
+body {
+  background: var(--product-gradient);
+  color: var(--foreground);
+  transition: background 0.8s ease-in-out;
+  overflow-x: hidden;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #f97316; /* orange-500 */
+  color: #ffffff;
+}
+
+/* Hide scrollbar for app-like feel */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}

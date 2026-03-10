@@ -4,7 +4,7 @@ import { motion, useScroll } from "framer-motion";
 import Image from "next/image";
 
 // ⚠️ REPLACE this with your actual WhatsApp number (with country code, no spaces or dashes)
-const WHATSAPP_NUMBER = "919999999999";
+const WHATSAPP_NUMBER = "919873813095";
 
 function getWhatsAppLink(message: string) {
     return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -69,3 +69,4 @@ export function Navbar() {
         </motion.nav>
     );
 }
+

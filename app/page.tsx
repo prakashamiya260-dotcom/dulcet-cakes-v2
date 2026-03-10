@@ -9,7 +9,7 @@ import { products } from "../data/products";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 // ⚠️ REPLACE this with your actual WhatsApp number (with country code, no spaces or dashes)
-const WHATSAPP_NUMBER = "919999999999";
+const WHATSAPP_NUMBER = "919873813095";
 
 function getWhatsAppLink(productName: string, price: string) {
     const message = `Hi Dulcet Cakes! 🎂 I'd like to order a *${productName}* (${price}). Could you please confirm availability and delivery details?`;
@@ -332,3 +332,4 @@ export default function Home() {
         </main>
     );
 }
+

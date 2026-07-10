@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --product-gradient: linear-gradient(135deg, #8D6E63 0%, #5D4037 100%);
+}
+
+body {
+  background: var(--product-gradient);
+  color: var(--foreground);
+  transition: background 0.8s ease-in-out;
+  overflow-x: hidden;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: #f97316; /* orange-500 */
+  color: #ffffff;
+}
+
+/* Hide scrollbar for app-like feel */
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+html {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.hero-vid {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .hero-vid {
+    height: 60%;
+    top: 20%;
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+  }
+}
+
+/* Card Highlight Animation */
+@keyframes popHighlight {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px rgba(249, 115, 22, 0.7);
+    border-color: #fb923c;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.highlighted {
+  animation: popHighlight 1.2s ease-in-out;
+  z-index: 10;
+}

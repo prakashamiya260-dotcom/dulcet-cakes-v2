@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TKK2NDMM');</script>
+  <!-- End Google Tag Manager -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dulcet Cakes — Preview</title>
@@ -925,6 +932,10 @@
 </head>
 
 <body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKK2NDMM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 
   <!-- Navbar -->
   <nav class="nav">
@@ -1101,9 +1112,10 @@
 
     const cakes = [
       { id: "classic-chocolate", name: "Classic Chocolate", sub: "Decadence redefined.", emoji: "🍫", badge: { t: "Bestseller", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#4E342E,#212121)", desc: "Our signature dark chocolate couverture cake — rich, velvety, unforgettable.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Rich Dark Cocoa", "Moist Sponge", "Premium Ganache"], params: ["100% Eggless", "Freshly Baked", "Premium Cocoa"], img: "" },
+      { id:"blueberry-delight", name:"Blueberry Delight", sub:"Berry luscious.", emoji:"🫐", photo: "public/Blueberry Delight.png", video: "public/videos/blueberry_vid.mp4", badge:{t:"New",bg:"#8b5cf6",c:"#fff"}, grad:"linear-gradient(135deg,#4A148C,#311B92)", desc:"Vanilla sponge layered with wild blueberry compote and tangy cream cheese frosting.", sizes:[{l:"500g · ₹649",p:"₹649",u:"500g"}], feats:["Wild Blueberries","Vanilla Sponge","Cream Cheese"], params:["Wild Blueberries","Cream Cheese","100% Eggless"], egg:true },
       { id: "strawberry-bliss", name: "Strawberry Bliss", sub: "Berry beautiful.", emoji: "🍓", badge: { t: "New", bg: "#ec4899", c: "#fff" }, grad: "linear-gradient(135deg,#E53935,#B71C1C)", desc: "Real strawberry compote, cream cheese frosting, light vanilla sponge.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Fresh Berries", "Light Sponge", "Cream Cheese"], params: ["100% Eggless", "Real Fruits", "Light Cream"], img: "" },
       { id: "vanilla-dream", name: "Vanilla Dream", sub: "Classic elegance.", emoji: "🍦", badge: null, grad: "linear-gradient(135deg,#F57F17,#E65100)", desc: "Madagascar vanilla bean sponge with silky buttercream frosting.", sizes: [{ l: "500g · ₹549", p: "₹549", u: "500g" }, { l: "1kg · ₹949", p: "₹949", u: "1kg" }, { l: "1.5kg · ₹1,349", p: "₹1,349", u: "1.5kg" }], feats: ["Madagascar Vanilla", "Buttercream", "Soft Crumb"], params: ["100% Eggless", "Real Vanilla", "Hand Whipped"], img: "" },
-      { id: "red-velvet", name: "Red Velvet", sub: "Velvety perfection.", emoji: "❤️", badge: { t: "Popular", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#C62828,#4A0000)", desc: "Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.", sizes: [{ l: "500g · ₹699", p: "₹699", u: "500g" }, { l: "1kg · ₹1,199", p: "₹1,199", u: "1kg" }, { l: "1.5kg · ₹1,599", p: "₹1,599", u: "1.5kg" }], feats: ["Cream Cheese Frosting", "Velvety Texture", "Premium Cocoa"], params: ["100% Eggless", "Cream Cheese", "Natural Colour"], img: "" },
+      { id: "red-velvet", name: "Red Velvet", sub: "Velvety perfection.", emoji: "❤️", badge: { t: "Popular", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#C62828,#4A0000)", desc: "Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.", sizes: [{ l: "500g · ₹749", p: "₹749", u: "500g" }, { l: "1kg · ₹1,199", p: "₹1,199", u: "1kg" }, { l: "1.5kg · ₹1,599", p: "₹1,599", u: "1.5kg" }], feats: ["Cream Cheese Frosting", "Velvety Texture", "Premium Cocoa"], params: ["100% Eggless", "Cream Cheese", "Natural Colour"], img: "" },
       { id: "belgian-dark", name: "Belgian Dark", sub: "Our signature masterpiece.", emoji: "🏆", badge: { t: "Premium", bg: "#fff", c: "#000" }, grad: "linear-gradient(135deg,#1A1208,#000)", desc: "72% Belgian couverture, dark ganache drip, hand-tempered chocolate shards.", sizes: [{ l: "500g · ₹899", p: "₹899", u: "500g" }, { l: "1kg · ₹1,599", p: "₹1,599", u: "1kg" }, { l: "1.5kg · ₹2,199", p: "₹2,199", u: "1.5kg" }], feats: ["72% Belgian Cocoa", "Dark Ganache Drip", "Hand-Tempered Shards"], params: ["100% Eggless", "72% Belgian Cocoa", "Premium Finish"], img: "" },
       { id: "butterscotch", name: "Butterscotch Crunch", sub: "Caramel sponge, crunchy praline.", emoji: "🍯", badge: null, grad: "linear-gradient(135deg,#FF8F00,#E65100)", desc: "Caramel-infused sponge with golden butterscotch sauce and crunchy praline bits.", sizes: [{ l: "500g · ₹549", p: "₹549", u: "500g" }, { l: "1kg · ₹949", p: "₹949", u: "1kg" }, { l: "1.5kg · ₹1,349", p: "₹1,349", u: "1.5kg" }], feats: ["Butterscotch Sauce", "Praline Crunch", "Soft Sponge"], params: ["100% Eggless", "Butterscotch Sauce", "Praline Bits"], img: "" },
       { id: "fresh-fruit", name: "Fresh Fruit Delight", sub: "Seasonal fruits, whipped cream.", emoji: "🍊", badge: { t: "Fresh", bg: "#22c55e", c: "#fff" }, grad: "linear-gradient(135deg,#2E7D32,#1B5E20)", desc: "Light vanilla sponge loaded with seasonal fresh fruits and whipped cream.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Seasonal Fruits", "Whipped Cream", "Light Sponge"], params: ["100% Eggless", "Fresh Fruits", "Light Cream"], img: "" },

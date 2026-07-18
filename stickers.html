@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TKK2NDMM');</script>
+  <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticker Generator - Top Curved Options</title>
+    <!-- Include html2canvas to allow downloading the stickers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Playfair+Display:ital,wght@0,600;1,700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #1f2937;
+            margin-bottom: 10px;
+        }
+        
+        p.subtitle {
+            color: #6b7280;
+            margin-bottom: 40px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px;
+            max-width: 1000px;
+        }
+
+        .sticker-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Container to render the sticker */
+        .sticker-container {
+            position: relative;
+            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Base Circular Sticker Format */
+        .circle-sticker {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            background: white;
+        }
+
+        /* The SVG layer for curved text */
+        .svg-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+        }
+
+        /* Image styling */
+        .circle-sticker img {
+            width: 170px; /* Scaled down slightly to make room for top text */
+            z-index: 5;
+            margin-top: 15px; /* Push logo down slightly so text isn't crowded */
+        }
+
+        /* Option 1: Classic Orange */
+        .sticker-1 {
+            border: 6px solid #f97316;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Option 2: Elegant Thin Border */
+        .sticker-2 {
+            border: 2px dashed #ec4899;
+            box-shadow: 0 10px 25px rgba(236, 72, 153, 0.15);
+            background: #fffaf5;
+        }
+        .sticker-2 img {
+            width: 160px;
+            margin-top: 25px;
+        }
+
+        /* Option 3: Solid Dark Theme */
+        .sticker-3 {
+            background: #1f2937;
+            border: 6px solid #fb923c;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+        }
+        .sticker-3 img {
+            filter: drop-shadow(0 0 15px rgba(249,115,22,0.3));
+        }
+
+        /* Option 4: Full Border Highlight */
+        .sticker-4 {
+            border: 12px solid #fed7aa;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        /* Download Button */
+        .download-btn {
+            background-color: #f97316;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+        .download-btn:hover {
+            background-color: #ea580c;
+        }
+        .download-btn:active {
+            transform: scale(0.95);
+        }
+
+    </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKK2NDMM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+    <h1>Top Curved Sticker Generator</h1>
+    <p class="subtitle">Your logo centered with the phone number curved beautifully along the top semi-circle.</p>
+
+    <div class="grid">
+        <!-- Option 1 -->
+        <div class="sticker-wrapper">
+            <div class="sticker-container" id="sticker-1">
+                <div class="circle-sticker sticker-1">
+                    <svg class="svg-layer" viewBox="0 0 300 300">
+                        <!-- Top curve path (Radius 120, Center 150,150) -->
+                        <path id="topCurve1" d="M 30 150 A 120 120 0 0 1 270 150" fill="transparent" />
+                        <text font-family="'Montserrat', sans-serif" font-size="24" font-weight="800" fill="#f97316" letter-spacing="1.5">
+                            <textPath href="#topCurve1" startOffset="50%" text-anchor="middle">
+                                📞 99997 89502
+                            </textPath>
+                        </text>
+                    </svg>
+                    <img src="./july/public/logo-circle.png" alt="Logo">
+                </div>
+            </div>
+            <button class="download-btn" onclick="downloadSticker('sticker-1', 'sticker-topcurve-orange.png')">Download Option 1</button>
+        </div>
+
+        <!-- Option 2 -->
+        <div class="sticker-wrapper">
+            <div class="sticker-container" id="sticker-2">
+                <div class="circle-sticker sticker-2">
+                    <svg class="svg-layer" viewBox="0 0 300 300">
+                        <path id="topCurve2" d="M 35 150 A 115 115 0 0 1 265 150" fill="transparent" />
+                        <!-- Bottom curve for extra flair -->
+                        <path id="bottomCurve2" d="M 45 150 A 105 105 0 0 0 255 150" fill="transparent" />
+                        
+                        <text font-family="'Playfair Display', serif" font-size="28" font-weight="700" fill="#ec4899" letter-spacing="2">
+                            <textPath href="#topCurve2" startOffset="50%" text-anchor="middle">
+                                +91 99997 89502
+                            </textPath>
+                        </text>
+                        <text font-family="'Montserrat', sans-serif" font-size="12" font-weight="700" fill="#6b7280" letter-spacing="3" text-transform="uppercase">
+                            <textPath href="#bottomCurve2" startOffset="50%" text-anchor="middle">
+                                Order Now
+                            </textPath>
+                        </text>
+                    </svg>
+                    <img src="./july/public/logo-circle.png" alt="Logo">
+                </div>
+            </div>
+            <button class="download-btn" onclick="downloadSticker('sticker-2', 'sticker-topcurve-elegant.png')">Download Option 2</button>
+        </div>
+
+        <!-- Option 3 -->
+        <div class="sticker-wrapper">
+            <div class="sticker-container" id="sticker-3">
+                <div class="circle-sticker sticker-3">
+                    <svg class="svg-layer" viewBox="0 0 300 300">
+                        <path id="topCurve3" d="M 25 150 A 125 125 0 0 1 275 150" fill="transparent" />
+                        <text font-family="'Montserrat', sans-serif" font-size="23" font-weight="800" fill="#ffffff" letter-spacing="3">
+                            <textPath href="#topCurve3" startOffset="50%" text-anchor="middle">
+                                99997 89502
+                            </textPath>
+                        </text>
+                    </svg>
+                    <img src="./july/public/logo-circle.png" alt="Logo">
+                </div>
+            </div>
+            <button class="download-btn" onclick="downloadSticker('sticker-3', 'sticker-topcurve-dark.png')">Download Option 3</button>
+        </div>
+
+        <!-- Option 4 -->
+        <div class="sticker-wrapper">
+            <div class="sticker-container" id="sticker-4">
+                <div class="circle-sticker sticker-4">
+                    <svg class="svg-layer" viewBox="0 0 300 300">
+                        <path id="topCurve4" d="M 35 150 A 115 115 0 0 1 265 150" fill="transparent" />
+                        <text font-family="'Montserrat', sans-serif" font-size="26" font-weight="800" fill="#1f2937" letter-spacing="1">
+                            <textPath href="#topCurve4" startOffset="50%" text-anchor="middle">
+                                99997 89502
+                            </textPath>
+                        </text>
+                    </svg>
+                    <img src="./july/public/logo-circle.png" alt="Logo">
+                </div>
+            </div>
+            <button class="download-btn" onclick="downloadSticker('sticker-4', 'sticker-topcurve-bold.png')">Download Option 4</button>
+        </div>
+    </div>
+
+    <script>
+        function downloadSticker(elementId, filename) {
+            const element = document.getElementById(elementId);
+            
+            // Generate canvas with higher scale for better print quality (3x resolution)
+            html2canvas(element, {
+                scale: 4, 
+                backgroundColor: null, // Keep transparent background if any
+                logging: false
+            }).then(canvas => {
+                // Convert to data URL and trigger download
+                const link = document.createElement('a');
+                link.download = filename;
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        }
+    </script>
+</body>
+</html>

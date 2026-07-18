@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TKK2NDMM');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulcet Cakes — Menu & Pricing</title>
+  <link rel="icon" type="image/png" href="public/logo-circle.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;1,700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #1a1208;
+      color: #fafafa;
+      -webkit-font-smoothing: antialiased;
+      padding-top: 100px;
+    }
+    ::selection { background-color: #f97316; color: #fff; }
+
+    /* Navbar from preview.html */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 12px 32px; background: rgba(0,0,0,0.65); backdrop-filter: blur(24px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .nav-logo { display: flex; align-items: center; gap: 16px; text-decoration: none; }
+    .nav-logo-img { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; }
+    .nav-logo-title { font-size: 1.4rem; font-weight: 800; background: linear-gradient(to right, #fb923c, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: #d1d5db; text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color 0.2s; }
+    .nav-links a:hover { color: #fb923c; }
+
+    /* Menu Card Styles */
+    .menu-container {
+      max-width: 900px;
+      margin: 40px auto 100px;
+      padding: 0 20px;
+    }
+    
+    .menu-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .menu-header h1 {
+      font-size: 3rem;
+      font-weight: 900;
+      background: linear-gradient(to right, #fb923c, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 10px;
+    }
+    .menu-header p {
+      color: #9ca3af;
+      font-size: 1.1rem;
+    }
+
+    .menu-card {
+      background: #fffaf5;
+      border-radius: 24px;
+      padding: 40px;
+      color: #431407;
+      border: 8px solid #fed7aa;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    }
+
+    .menu-inner-border {
+      border: 2px dashed rgba(236, 72, 153, 0.4);
+      border-radius: 16px;
+      padding: 40px;
+    }
+
+    .menu-title {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      font-size: 3rem;
+      color: #ec4899;
+      margin-bottom: 5px;
+    }
+    
+    .menu-subtitle {
+      text-align: center;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: #9ca3af;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    .category-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #f97316;
+      border-bottom: 2px solid #fed7aa;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 30px;
+    }
+    .premium-title {
+      color: #ec4899;
+      border-color: #fbcfe8;
+      margin-top: 50px;
+    }
+
+    .price-header {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #9ca3af;
+      margin-bottom: 15px;
+      padding-right: 10px;
+    }
+    .price-col { width: 70px; text-align: center; }
+
+    .menu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+    
+    .item-name-container {
+      flex-grow: 1;
+      position: relative;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .item-name {
+      background: #fffaf5;
+      padding-right: 15px;
+      position: relative;
+      z-index: 2;
+    }
+    .item-dots {
+      position: absolute;
+      bottom: 6px;
+      left: 0;
+      width: 100%;
+      border-bottom: 2px dotted #d1d5db;
+      z-index: 1;
+    }
+    
+    .item-prices {
+      display: flex;
+      gap: 20px;
+      background: #fffaf5;
+      padding-left: 15px;
+      position: relative;
+      z-index: 2;
+      font-weight: 800;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #6b7280;
+      font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .menu-card { padding: 20px; }
+      .menu-inner-border { padding: 20px; }
+      .menu-title { font-size: 2rem; }
+      .item-name-container { font-size: 1rem; }
+      .price-col { width: 50px; font-size: 0.7rem; }
+      .item-prices { font-size: 0.9rem; gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKK2NDMM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navbar -->
+  <nav class="nav">
+    <a href="preview.html" class="nav-logo">
+      <img src="public/logo-circle.png" class="nav-logo-img" alt="Logo">
+      <div class="nav-logo-text">
+        <div class="nav-logo-title">Dulcet Cakes</div>
+      </div>
+    </a>
+    <div class="nav-links">
+      <a href="preview.html">Home</a>
+      <a href="menu.html" style="color: #fb923c;">Menu & Pricing</a>
+    </div>
+  </nav>
+
+  <div class="menu-container">
+    <div class="menu-header">
+      <h1>Our Menu & Pricing</h1>
+      <p>100% Eggless artisanal cakes, baked fresh to order.</p>
+    </div>
+
+    <div class="menu-card">
+      <div class="menu-inner-border">
+        
+        <div style="text-align: center; font-size: 2.5rem; margin-bottom: 10px;">🧁</div>
+        <div class="menu-title">Dulcet Cakes Menu</div>
+        <div class="menu-subtitle">Home Bakery • 100% Eggless</div>
+
+        <!-- Classic Flavors -->
+        <div class="category-title">Classic Flavors</div>
+        <div class="price-header">
+          <div class="price-col">Bento</div>
+          <div class="price-col">Half Kg</div>
+          <div class="price-col">Full Kg</div>
+        </div>
+
+        <div id="classic-list"></div>
+
+        <!-- Premium Flavors -->
+        <div class="category-title premium-title">Premium Indulgence</div>
+        <div class="price-header">
+          <div class="price-col">Bento</div>
+          <div class="price-col">Half Kg</div>
+          <div class="price-col">Full Kg</div>
+        </div>
+
+        <div id="premium-list"></div>
+
+        <div class="note">* Prices are indicative and subject to customization. Please contact us for exact quotes on designer or custom cakes.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const classicCakes = [
+      "Vanilla Dream", "Strawberry Bliss", "Classic Chocolate", 
+      "Midnight Mousse", "Fresh Fruit Delight", "Butterscotch Crunch", 
+      "Blueberry Delight", "Red Velvet"
+    ];
+
+    const premiumCakes = [
+      "Belgian Dark", "Salted Caramel Cake", "Golden Rocher Cake", 
+      "Biscoff Heaven", "Saffron Rasmalai Cake", "KitKat Krunch Blast", 
+      "Oreo Obsession", "Nutella Nirvana"
+    ];
+
+    function createList(cakes, bentoPrice, halfPrice, fullPrice, containerId) {
+      const container = document.getElementById(containerId);
+      cakes.forEach(cake => {
+        container.innerHTML += `
+          <div class="menu-item">
+            <div class="item-name-container">
+              <span class="item-name">${cake}</span>
+              <div class="item-dots"></div>
+            </div>
+            <div class="item-prices">
+              <div class="price-col">₹${bentoPrice}</div>
+              <div class="price-col">₹${halfPrice}</div>
+              <div class="price-col">₹${fullPrice}</div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    createList(classicCakes, 350, 600, 1100, 'classic-list');
+    createList(premiumCakes, 450, 800, 1500, 'premium-list');
+  </script>
+</body>
+</html>

@@ -79,38 +79,38 @@ const cakes: Cake[] = [
         params: ["Freshly Baked", "100% Eggless", "Premium Cocoa"],
     },
     {
-        id: "red-velvet",
-        name: "Red Velvet",
-        subName: "Velvety perfection.",
-        emoji: "❤️",
-        photo: "/Red Velvet.jpeg",
-        video: "/videos/red_velvet.mp4",
-        badge: { text: "Popular", bg: "#f97316", color: "#000" },
-        gradient: "linear-gradient(135deg, #C62828, #4A0000)",
-        desc: "Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.",
-        sizes: "500g · ₹699 | 1kg · ₹1,199 | 1.5kg · ₹1,599",
-        basePrice: "₹699",
-        features: ["Cream Cheese Frosting", "Velvety Texture", "Premium Cocoa"],
+        id: "midnight-mousse",
+        name: "Midnight Mousse",
+        subName: "Rich chocolate velvet.",
+        emoji: "🍫",
+        photo: "/Midnight Mousse.jpeg",
+        video: null,
+        badge: { text: "Chef's Special", bg: "#7c3aed", color: "#fff" },
+        gradient: "linear-gradient(135deg, #2D1B4E, #1F1235)",
+        desc: "Decadent layers of dark chocolate sponge and airy chocolate mousse, coated in a glossy chocolate glaze.",
+        sizes: "500g · ₹649 | 1kg · ₹1,099 | 1.5kg · ₹1,499",
+        basePrice: "₹649",
+        features: ["Dark Chocolate Mousse", "Glazed Finish", "Fluffy Sponge"],
         eggless: true,
-        sizePrices: [{ label: "500g · ₹699", price: "₹699", unit: "500g cake" }, { label: "1kg · ₹1,199", price: "₹1,199", unit: "1kg cake" }, { label: "1.5kg · ₹1,599", price: "₹1,599", unit: "1.5kg cake" }],
-        params: ["Cream Cheese", "Velvety Texture", "100% Eggless"],
+        sizePrices: [{ label: "500g · ₹649", price: "₹649", unit: "500g cake" }, { label: "1kg · ₹1,099", price: "₹1,099", unit: "1kg cake" }, { label: "1.5kg · ₹1,499", price: "₹1,499", unit: "1.5kg cake" }],
+        params: ["Cold Crafted", "100% Eggless", "Belgian Cocoa"],
     },
     {
-        id: "belgian-dark",
-        name: "Belgian Dark",
-        subName: "Our signature masterpiece.",
-        emoji: "🏆",
-        photo: "/Belgian Dark (Premium).jpeg",
+        id: "fresh-fruit",
+        name: "Fresh Fruit Delight",
+        subName: "Seasonal fruits, vanilla whipped cream.",
+        emoji: "🍊",
+        photo: "/fresh_fruit_delight.jpeg",
         video: null,
-        badge: { text: "Premium", bg: "#fff", color: "#000" },
-        gradient: "linear-gradient(135deg, #1A1208, #000)",
-        desc: "72% Belgian couverture, dark ganache drip, hand-tempered chocolate shards.",
-        sizes: "500g · ₹899 | 1kg · ₹1,599 | 1.5kg · ₹2,199",
-        basePrice: "₹899",
-        features: ["72% Belgian Cocoa", "Dark Ganache Drip", "Hand-Tempered Shards"],
+        badge: { text: "Eggless", bg: "#22c55e", color: "#fff" },
+        gradient: "linear-gradient(135deg, #2E7D32, #1B5E20)",
+        desc: "Light vanilla sponge loaded with seasonal fresh fruits and whipped cream.",
+        sizes: "500g · ₹599 | 1kg · ₹999 | 1.5kg · ₹1,399",
+        basePrice: "₹599",
+        features: ["Seasonal Fruits", "Whipped Cream", "Light Sponge"],
         eggless: true,
-        sizePrices: [{ label: "500g · ₹899", price: "₹899", unit: "500g cake" }, { label: "1kg · ₹1,599", price: "₹1,599", unit: "1kg cake" }, { label: "1.5kg · ₹2,199", price: "₹2,199", unit: "1.5kg cake" }],
-        params: ["72% Belgian Cocoa", "Cold Crafted", "100% Eggless"],
+        sizePrices: [{ label: "500g · ₹599", price: "₹599", unit: "500g cake" }, { label: "1kg · ₹999", price: "₹999", unit: "1kg cake" }, { label: "1.5kg · ₹1,399", price: "₹1,399", unit: "1.5kg cake" }],
+        params: ["100% Eggless", "Fresh Fruits", "Light Cream"],
     },
     {
         id: "butterscotch",
@@ -130,23 +130,6 @@ const cakes: Cake[] = [
         params: ["Butterscotch Sauce", "Praline Bits", "100% Eggless"],
     },
     {
-        id: "fresh-fruit",
-        name: "Fresh Fruit Delight",
-        subName: "Seasonal fruits, vanilla whipped cream.",
-        emoji: "🍊",
-        photo: "/Fresh Fruit Delight.jpeg",
-        video: null,
-        badge: { text: "Eggless", bg: "#22c55e", color: "#fff" },
-        gradient: "linear-gradient(135deg, #2E7D32, #1B5E20)",
-        desc: "Light vanilla sponge loaded with seasonal fresh fruits and whipped cream.",
-        sizes: "500g · ₹599 | 1kg · ₹999 | 1.5kg · ₹1,399",
-        basePrice: "₹599",
-        features: ["Seasonal Fruits", "Whipped Cream", "Light Sponge"],
-        eggless: true,
-        sizePrices: [{ label: "500g · ₹599", price: "₹599", unit: "500g cake" }, { label: "1kg · ₹999", price: "₹999", unit: "1kg cake" }, { label: "1.5kg · ₹1,399", price: "₹1,399", unit: "1.5kg cake" }],
-        params: ["100% Eggless", "Fresh Fruits", "Light Cream"],
-    },
-    {
         id: "blueberry-delight",
         name: "Blueberry Delight",
         subName: "Berry luscious.",
@@ -156,29 +139,46 @@ const cakes: Cake[] = [
         badge: { text: "New", bg: "#8b5cf6", color: "#fff" },
         gradient: "linear-gradient(135deg, #4A148C, #311B92)",
         desc: "Vanilla sponge layered with wild blueberry compote and tangy cream cheese frosting.",
-        sizes: "500g · ₹850",
-        basePrice: "₹850",
+        sizes: "500g · ₹649",
+        basePrice: "₹649",
         features: ["Wild Blueberries", "Vanilla Sponge", "Cream Cheese"],
         eggless: true,
-        sizePrices: [{ label: "500g · ₹850", price: "₹850", unit: "500g cake" }],
+        sizePrices: [{ label: "500g · ₹649", price: "₹649", unit: "500g cake" }],
         params: ["Wild Blueberries", "Cream Cheese", "100% Eggless"],
     },
     {
-        id: "black-forest",
-        name: "Black Forest",
-        subName: "Cherry compote, chocolate shavings.",
-        emoji: "🍒",
-        photo: "/Black Forest.jpeg",
-        video: null,
-        badge: null,
-        gradient: "linear-gradient(135deg, #3E2723, #1A1208)",
-        desc: "Classic Black Forest with cherry compote, whipped cream, and dark chocolate shavings.",
-        sizes: "500g · ₹599 | 1kg · ₹999 | 1.5kg · ₹1,399",
-        basePrice: "₹599",
-        features: ["Cherry Compote", "Choco Shavings", "Whipped Cream"],
+        id: "red-velvet",
+        name: "Red Velvet",
+        subName: "Velvety perfection.",
+        emoji: "❤️",
+        photo: "/Red Velvet.jpeg",
+        video: "/videos/red_velvet.mp4",
+        badge: { text: "Popular", bg: "#f97316", color: "#000" },
+        gradient: "linear-gradient(135deg, #C62828, #4A0000)",
+        desc: "Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.",
+        sizes: "500g · ₹749 | 1kg · ₹1,199 | 1.5kg · ₹1,599",
+        basePrice: "₹749",
+        features: ["Cream Cheese Frosting", "Velvety Texture", "Premium Cocoa"],
         eggless: true,
-        sizePrices: [{ label: "500g · ₹599", price: "₹599", unit: "500g cake" }, { label: "1kg · ₹999", price: "₹999", unit: "1kg cake" }, { label: "1.5kg · ₹1,399", price: "₹1,399", unit: "1.5kg cake" }],
-        params: ["Cherry Compote", "Dark Chocolate", "100% Eggless"],
+        sizePrices: [{ label: "500g · ₹749", price: "₹749", unit: "500g cake" }, { label: "1kg · ₹1,199", price: "₹1,199", unit: "1kg cake" }, { label: "1.5kg · ₹1,599", price: "₹1,599", unit: "1.5kg cake" }],
+        params: ["Cream Cheese", "Velvety Texture", "100% Eggless"],
+    },
+    {
+        id: "belgian-dark",
+        name: "Belgian Dark",
+        subName: "Our signature masterpiece.",
+        emoji: "🏆",
+        photo: "/Belgian Dark (Premium).jpeg",
+        video: null,
+        badge: { text: "Premium", bg: "#fff", color: "#000" },
+        gradient: "linear-gradient(135deg, #1A1208, #000)",
+        desc: "72% Belgian couverture, dark ganache drip, hand-tempered chocolate shards.",
+        sizes: "500g · ₹899 | 1kg · ₹1,599 | 1.5kg · ₹2,199",
+        basePrice: "₹899",
+        features: ["72% Belgian Cocoa", "Dark Ganache Drip", "Hand-Tempered Shards"],
+        eggless: true,
+        sizePrices: [{ label: "500g · ₹899", price: "₹899", unit: "500g cake" }, { label: "1kg · ₹1,599", price: "₹1,599", unit: "1kg cake" }, { label: "1.5kg · ₹2,199", price: "₹2,199", unit: "1.5kg cake" }],
+        params: ["72% Belgian Cocoa", "Cold Crafted", "100% Eggless"],
     },
     {
         id: "salted-caramel-cake",
@@ -249,23 +249,6 @@ const cakes: Cake[] = [
         params: ["Premium Rabdi", "100% Eggless", "Rich Saffron"],
     },
     {
-        id: "midnight-mousse",
-        name: "Midnight Mousse",
-        subName: "Rich chocolate velvet.",
-        emoji: "🍫",
-        photo: "/Midnight Mousse.jpeg",
-        video: null,
-        badge: { text: "Chef's Special", bg: "#7c3aed", color: "#fff" },
-        gradient: "linear-gradient(135deg, #2D1B4E, #1F1235)",
-        desc: "Decadent layers of dark chocolate sponge and airy chocolate mousse, coated in a glossy chocolate glaze.",
-        sizes: "500g · ₹649 | 1kg · ₹1,099 | 1.5kg · ₹1,499",
-        basePrice: "₹649",
-        features: ["Dark Chocolate Mousse", "Glazed Finish", "Fluffy Sponge"],
-        eggless: true,
-        sizePrices: [{ label: "500g · ₹649", price: "₹649", unit: "500g cake" }, { label: "1kg · ₹1,099", price: "₹1,099", unit: "1kg cake" }, { label: "1.5kg · ₹1,499", price: "₹1,499", unit: "1.5kg cake" }],
-        params: ["Cold Crafted", "100% Eggless", "Belgian Cocoa"],
-    },
-    {
         id: "kitkat-krunch-blast",
         name: "KitKat Krunch Blast",
         subName: "Chocolate-wafer explosion.",
@@ -316,6 +299,23 @@ const cakes: Cake[] = [
         sizePrices: [{ label: "500g · ₹749", price: "₹749", unit: "500g cake" }, { label: "1kg · ₹1,299", price: "₹1,299", unit: "1kg cake" }, { label: "1.5kg · ₹1,799", price: "₹1,799", unit: "1.5kg cake" }],
         params: ["Real Nutella", "100% Eggless", "Hazelnut Crunch"],
     },
+    {
+        id: "black-forest",
+        name: "Black Forest",
+        subName: "Cherry compote, chocolate shavings.",
+        emoji: "🍒",
+        photo: "/Black Forest.jpeg",
+        video: null,
+        badge: null,
+        gradient: "linear-gradient(135deg, #3E2723, #1A1208)",
+        desc: "Classic Black Forest with cherry compote, whipped cream, and dark chocolate shavings.",
+        sizes: "500g · ₹599 | 1kg · ₹999 | 1.5kg · ₹1,399",
+        basePrice: "₹599",
+        features: ["Cherry Compote", "Choco Shavings", "Whipped Cream"],
+        eggless: true,
+        sizePrices: [{ label: "500g · ₹599", price: "₹599", unit: "500g cake" }, { label: "1kg · ₹999", price: "₹999", unit: "1kg cake" }, { label: "1.5kg · ₹1,399", price: "₹1,399", unit: "1.5kg cake" }],
+        params: ["Cherry Compote", "Dark Chocolate", "100% Eggless"],
+    },
 ];
 
 const heroStats = [
@@ -325,7 +325,8 @@ const heroStats = [
 ];
 
 export default function Home() {
-    const [activeHero, setActiveHero] = useState(0);
+    const slideSequence = [1, 2, 7, 6];
+    const [activeHero, setActiveHero] = useState(slideSequence[0]);
     const [selectedSize, setSelectedSize] = useState(0);
     const videoRef1 = useRef<HTMLVideoElement>(null);
     const videoRef2 = useRef<HTMLVideoElement>(null);
@@ -334,13 +335,10 @@ export default function Home() {
     const [progress, setProgress] = useState(0);
 
     const getNextIndex = (currentIdx: number) => {
-        let i = currentIdx + 1;
-        while (cakes[i] && !cakes[i].video) i++;
-        if (!cakes[i]) {
-            i = 0;
-            while (cakes[i] && !cakes[i].video) i++;
-        }
-        return i;
+        let seqIdx = slideSequence.indexOf(currentIdx);
+        if (seqIdx === -1) return slideSequence[0];
+        seqIdx = (seqIdx + 1) % slideSequence.length;
+        return slideSequence[seqIdx];
     };
 
     const hero = cakes[activeHero];
@@ -357,7 +355,7 @@ export default function Home() {
 
         // If first load, play first video explicitly since autoPlay is removed
         if (!v1.src || v1.src === window.location.href) {
-            v1.src = "/videos/hero.mp4";
+            v1.src = cakes[0].video || "/videos/hero.mp4";
             v1.load();
             v1.play().catch(console.error);
             return;
@@ -658,26 +656,30 @@ export default function Home() {
 
             {/* ── Bottom Flavor Menu ── */}
             <div className="fixed bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-40 flex px-2 py-1.5 md:p-2 rounded-full border shadow-2xl max-w-[calc(100vw-32px)] overflow-x-auto whitespace-nowrap" style={{ background: "rgba(0,0,0,0.5)", backdropFilter: "blur(20px)", borderColor: "rgba(255,255,255,0.12)" }}>
-                {cakes.map((c, i) => c.video ? (
-                    <button
-                        key={c.id}
-                        onClick={() => { setActiveHero(i); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                        className="relative overflow-hidden px-3 md:px-4 py-2 rounded-full text-[11px] md:text-xs font-medium transition-all shrink-0"
-                        style={{
-                            color: activeHero === i ? "white" : "rgba(255,255,255,0.6)",
-                            background: activeHero === i ? "rgba(255,255,255,0.15)" : "none",
-                            boxShadow: activeHero === i ? "0 2px 8px rgba(0,0,0,0.3)" : "none",
-                        }}
-                    >
-                        <span className="relative z-10">{c.name}</span>
-                        {activeHero === i && (
-                            <div
-                                className="absolute top-0 left-0 h-full bg-white/30 z-0 transition-all duration-100 ease-linear pointer-events-none"
-                                style={{ width: `${progress}%` }}
-                            />
-                        )}
-                    </button>
-                ) : null)}
+                {slideSequence.map((cakeIdx) => {
+                    const c = cakes[cakeIdx];
+                    if (!c || !c.video) return null;
+                    return (
+                        <button
+                            key={c.id}
+                            onClick={() => { setActiveHero(cakeIdx); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                            className="relative overflow-hidden px-3 md:px-4 py-2 rounded-full text-[11px] md:text-xs font-medium transition-all shrink-0"
+                            style={{
+                                color: activeHero === cakeIdx ? "white" : "rgba(255,255,255,0.6)",
+                                background: activeHero === cakeIdx ? "rgba(255,255,255,0.15)" : "none",
+                                boxShadow: activeHero === cakeIdx ? "0 2px 8px rgba(0,0,0,0.3)" : "none",
+                            }}
+                        >
+                            <span className="relative z-10">{c.name}</span>
+                            {activeHero === cakeIdx && (
+                                <div
+                                    className="absolute top-0 left-0 h-full bg-white/30 z-0 transition-all duration-100 ease-linear pointer-events-none"
+                                    style={{ width: `${progress}%` }}
+                                />
+                            )}
+                        </button>
+                    );
+                })}
             </div>
         </main>
     );

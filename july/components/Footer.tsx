@@ -6,16 +6,20 @@ export function Footer() {
             "Vanilla Dream": "vanilla-dream",
             "Strawberry Bliss": "strawberry-bliss",
             "Classic Chocolate": "classic-chocolate",
+            "Midnight Mousse": "midnight-mousse",
+            "Fresh Fruit Delight": "fresh-fruit",
+            "Butterscotch Crunch": "butterscotch",
+            "Blueberry Delight": "blueberry-delight",
             "Red Velvet": "red-velvet",
-            "Belgian Dark Chocolate": "belgian-dark",
+            "Belgian Dark": "belgian-dark",
             "Salted Caramel Cake": "salted-caramel-cake",
             "Golden Rocher Cake": "golden-rocher",
             "Biscoff Heaven": "biscoff-heaven",
             "Saffron Rasmalai Cake": "saffron-rasmalai",
-            "Midnight Mousse": "midnight-mousse",
             "KitKat Krunch Blast": "kitkat-krunch-blast",
             "Oreo Obsession": "oreo-obsession",
-            "Nutella Nirvana": "nutella-nirvana"
+            "Nutella Nirvana": "nutella-nirvana",
+            "Black Forest": "black-forest"
         };
         const id = nameMap[name];
         if (id && (window as any).highlightCake) {
@@ -42,7 +46,7 @@ export function Footer() {
                 <div>
                     <h4 className="font-semibold text-orange-400 mb-4 text-sm">Our Cakes</h4>
                     <ul className="space-y-2 text-sm text-gray-400">
-                        {["Vanilla Dream", "Strawberry Bliss", "Classic Chocolate", "Red Velvet", "Belgian Dark Chocolate", "Salted Caramel Cake", "Golden Rocher Cake", "Biscoff Heaven"].map(c => (
+                        {["Vanilla Dream", "Strawberry Bliss", "Classic Chocolate", "Midnight Mousse", "Fresh Fruit Delight", "Butterscotch Crunch", "Blueberry Delight", "Red Velvet"].map(c => (
                             <li key={c}>
                                 <a
                                     href="#catalog"
@@ -60,7 +64,7 @@ export function Footer() {
                 <div>
                     <h4 className="font-semibold text-orange-400 mb-4 text-sm opacity-0 select-none pointer-events-none hidden lg:block">&nbsp;</h4>
                     <ul className="space-y-2 text-sm text-gray-400">
-                        {["Saffron Rasmalai Cake", "Midnight Mousse", "KitKat Krunch Blast", "Oreo Obsession", "Nutella Nirvana", "Eggless Cakes", "Custom Designer Cakes"].map(c => (
+                        {["Belgian Dark", "Salted Caramel Cake", "Golden Rocher Cake", "Biscoff Heaven", "Saffron Rasmalai Cake", "KitKat Krunch Blast", "Oreo Obsession", "Nutella Nirvana", "Black Forest"].map(c => (
                             <li key={c}>
                                 <a
                                     href="#catalog"
@@ -76,12 +80,6 @@ export function Footer() {
 
                 {/* Support & Delivery */}
                 <div>
-                    <h4 className="font-semibold text-orange-400 mb-4 text-sm">Support</h4>
-                    <ul className="space-y-2 text-sm text-gray-400 mb-6">
-                        {["FAQ", "Delivery Info", "Refund Policy", "Contact Us"].map(s => (
-                            <li key={s}><a href="#" className="hover:text-white transition-colors">{s}</a></li>
-                        ))}
-                    </ul>
                     <h4 className="font-semibold text-orange-400 mb-3 text-sm">Delivery Areas</h4>
                     <p className="text-xs text-gray-500 leading-relaxed">
                         Boring Road, Kankarbagh, Patliputra, Bailey Road, Ashiana, Digha, Danapur, Fraser Road & all Patna areas

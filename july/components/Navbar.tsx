@@ -41,6 +41,11 @@ export function Navbar() {
                 </div>
             </div>
 
+            {/* Navigation Links */}
+            <div className="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-300">
+                <a href="/" className="hover:text-orange-400 transition-colors">Home</a>
+            </div>
+
             {/* Order Now → WhatsApp */}
             <a
                 href={`https://wa.me/${WHATSAPP_NUMBER}?text=${orderMsg}`}

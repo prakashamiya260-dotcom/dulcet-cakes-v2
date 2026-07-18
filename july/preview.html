@@ -689,7 +689,8 @@
       <div class="nav-logo-subtitle">100% Eggless 🌿</div>
     </div>
   </div>
-  <a href="https://wa.me/919999789502?text=Hi%20Dulcet%20Cakes!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn-wa-nav">
+  <div style="display: flex; gap: 24px; align-items: center;">
+    <a href="https://wa.me/919999789502?text=Hi%20Dulcet%20Cakes!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn-wa-nav">
     <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
         <path
           d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -798,34 +799,29 @@
           <li><a href="javascript:void(0)" onclick="highlightCake('vanilla-dream')">Vanilla Dream</a></li>
           <li><a href="javascript:void(0)" onclick="highlightCake('strawberry-bliss')">Strawberry Bliss</a></li>
           <li><a href="javascript:void(0)" onclick="highlightCake('classic-chocolate')">Classic Chocolate</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('midnight-mousse')">Midnight Mousse</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('fresh-fruit')">Fresh Fruit Delight</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('butterscotch')">Butterscotch Crunch</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('blueberry-delight')">Blueberry Delight</a></li>
           <li><a href="javascript:void(0)" onclick="highlightCake('red-velvet')">Red Velvet</a></li>
-          <li><a href="javascript:void(0)" onclick="highlightCake('belgian-dark')">Belgian Dark Chocolate</a></li>
-          <li><a href="javascript:void(0)" onclick="highlightCake('salted-caramel-cake')">Salted Caramel Cake</a></li>
-          <li><a href="javascript:void(0)" onclick="highlightCake('golden-rocher')">Golden Rocher Cake</a></li>
-          <li><a href="javascript:void(0)" onclick="highlightCake('biscoff-heaven')">Biscoff Heaven</a></li>
         </ul>
       </div>
       <div>
         <h4 class="mobile-hide" style="opacity: 0; pointer-events: none;">&nbsp;</h4>
         <ul>
+          <li><a href="javascript:void(0)" onclick="highlightCake('belgian-dark')">Belgian Dark</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('salted-caramel-cake')">Salted Caramel Cake</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('golden-rocher')">Golden Rocher Cake</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('biscoff-heaven')">Biscoff Heaven</a></li>
           <li><a href="javascript:void(0)" onclick="highlightCake('saffron-rasmalai')">Saffron Rasmalai Cake</a></li>
-          <li><a href="javascript:void(0)" onclick="highlightCake('midnight-mousse')">Midnight Mousse</a></li>
           <li><a href="javascript:void(0)" onclick="highlightCake('kitkat-krunch-blast')">KitKat Krunch Blast</a></li>
           <li><a href="javascript:void(0)" onclick="highlightCake('oreo-obsession')">Oreo Obsession</a></li>
           <li><a href="javascript:void(0)" onclick="highlightCake('nutella-nirvana')">Nutella Nirvana</a></li>
-          <li><a href="#catalog">Eggless Cakes</a></li>
-          <li><a href="#catalog">Custom Designer Cakes</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('black-forest')">Black Forest</a></li>
         </ul>
       </div>
       <div>
-        <h4>Support</h4>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Delivery Info</a></li>
-          <li><a href="#">Refund Policy</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-        <h4 style="margin-top:24px;">Delivery Areas</h4>
+        <h4>Delivery Areas</h4>
         <p class="delivery-areas">Boring Road, Kankarbagh, Patliputra, Bailey Road, Ashiana, Digha, Danapur, Fraser Road
           & all Patna areas</p>
       </div>
@@ -853,23 +849,24 @@
       { id:"vanilla-dream", name:"Vanilla Dream", sub:"Classic elegance.", emoji:"🍦", photo: "public/Vanilla Dream.jpeg", video: null, badge:null, grad:"linear-gradient(135deg,#F57F17,#E65100)", desc:"Madagascar vanilla bean sponge with silky buttercream frosting.", sizes:[{l:"500g · ₹549",p:"₹549",u:"500g"},{l:"1kg · ₹949",p:"₹949",u:"1kg"},{l:"1.5kg · ₹1,349",p:"₹1,349",u:"1.5kg"}], feats:["Madagascar Vanilla","Buttercream","Soft Crumb"], params:["Real Vanilla","Hand Whipped","100% Eggless"], egg:true },
       { id:"strawberry-bliss", name:"Strawberry Bliss", sub:"Berry beautiful.", emoji:"🍓", photo: "public/Strawberry Bliss.jpeg", video: "public/videos/strawberry_vid.mp4", badge:{t:"New",bg:"#ec4899",c:"#fff"}, grad:"linear-gradient(135deg,#E53935,#B71C1C)", desc:"Real strawberry compote, cream cheese frosting, light vanilla sponge.", sizes:[{l:"500g · ₹649",p:"₹649",u:"500g"},{l:"1kg · ₹1,099",p:"₹1,099",u:"1kg"},{l:"1.5kg · ₹1,499",p:"₹1,499",u:"1.5kg"}], feats:["Fresh Berries","Light Sponge","Cream Cheese"], params:["Real Fruits","Light Cream","100% Eggless"], egg:true },
       { id:"classic-chocolate", name:"Classic Chocolate", sub:"Decadence redefined.", emoji:"🍫", photo: "public/Classic Chocolate.jpeg", video: "public/videos/hero.mp4", badge:{t:"Bestseller",bg:"#f97316",c:"#000"}, grad:"linear-gradient(135deg,#4E342E,#212121)", desc:"Our signature dark chocolate couverture cake — rich, velvety, unforgettable.", sizes:[{l:"500g · ₹599",p:"₹599",u:"500g"},{l:"1kg · ₹999",p:"₹999",u:"1kg"},{l:"1.5kg · ₹1,399",p:"₹1,399",u:"1.5kg"}], feats:["Rich Dark Cocoa","Moist Sponge","Premium Ganache"], params:["Freshly Baked","100% Eggless","Premium Cocoa"], egg:true },
-      { id:"red-velvet", name:"Red Velvet", sub:"Velvety perfection.", emoji:"❤️", photo: "public/Red Velvet.jpeg", video: "public/videos/red_velvet.mp4", badge:{t:"Popular",bg:"#f97316",c:"#000"}, grad:"linear-gradient(135deg,#C62828,#4A0000)", desc:"Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.", sizes:[{l:"500g · ₹699",p:"₹699",u:"500g"},{l:"1kg · ₹1,199",p:"₹1,199",u:"1kg"},{l:"1.5kg · ₹1,599",p:"₹1,599",u:"1.5kg"}], feats:["Cream Cheese Frosting","Velvety Texture","Premium Cocoa"], params:["Cream Cheese","Velvety Texture","100% Eggless"], egg:true },
-      { id:"blueberry-delight", name:"Blueberry Delight", sub:"Berry luscious.", emoji:"🫐", photo: null, video: "public/videos/blueberry_vid.mp4", badge:{t:"New",bg:"#8b5cf6",c:"#fff"}, grad:"linear-gradient(135deg,#4A148C,#311B92)", desc:"Vanilla sponge layered with wild blueberry compote and tangy cream cheese frosting.", sizes:[{l:"500g · ₹850",p:"₹850",u:"500g"}], feats:["Wild Blueberries","Vanilla Sponge","Cream Cheese"], params:["Wild Blueberries","Cream Cheese","100% Eggless"], egg:true },
-      { id:"belgian-dark", name:"Belgian Dark", sub:"Our signature masterpiece.", emoji:"🏆", photo: "public/Belgian Dark (Premium).jpeg", video: null, badge:{t:"Premium",bg:"#fff",c:"#000"}, grad:"linear-gradient(135deg,#1A1208,#000)", desc:"72% Belgian couverture, dark ganache drip, hand-tempered chocolate shards.", sizes:[{l:"500g · ₹899",p:"₹899",u:"500g"},{l:"1kg · ₹1,599",p:"₹1,599",u:"1kg"},{l:"1.5kg · ₹2,199",p:"₹2,199",u:"1.5kg"}], feats:["72% Belgian Cocoa","Dark Ganache Drip","Hand-Tempered Shards"], params:["72% Belgian Cocoa","Cold Crafted","Premium Finish"], egg:true },
+      { id:"midnight-mousse", name:"Midnight Mousse", sub:"Rich chocolate velvet.", emoji:"🍫", photo: "public/Midnight Mousse.jpeg", video: null, badge:{t:"Chef's Special",bg:"#7c3aed",c:"#fff"}, grad:"linear-gradient(135deg,#2D1B4E,#1F1235)", desc:"Decadent layers of dark chocolate sponge and airy chocolate mousse, coated in a glossy chocolate glaze.", sizes:[{l:"500g · ₹649",p:"₹649",u:"500g"},{l:"1kg · ₹1,099",p:"₹1,099",u:"1kg"},{l:"1.5kg · ₹1,499",p:"₹1,499",u:"1.5kg"}], feats:["Dark Chocolate Mousse","Glazed Finish","Fluffy Sponge"], params:["Cold Crafted","100% Eggless","Belgian Cocoa"], egg:true },
+      { id:"fresh-fruit", name:"Fresh Fruit Delight", sub:"Seasonal fruits, whipped cream.", emoji:"🍊", photo: "public/fresh_fruit_delight.jpeg", video: null, badge:{t:"Eggless",bg:"#22c55e",c:"#fff"}, grad:"linear-gradient(135deg,#2E7D32,#1B5E20)", desc:"Light vanilla sponge loaded with seasonal fresh fruits and whipped cream.", sizes:[{l:"500g · ₹599",p:"₹599",u:"500g"},{l:"1kg · ₹999",p:"₹999",u:"1kg"},{l:"1.5kg · ₹1,399",p:"₹1,399",u:"1.5kg"}], feats:["Seasonal Fruits","Whipped Cream","100% Eggless"], params:["100% Eggless","Fresh Fruits","Light Cream"], egg:true },
       { id:"butterscotch", name:"Butterscotch Crunch", sub:"Caramel sponge, crunchy praline.", emoji:"🍯", photo: "public/Butterscotch Crunch.jpeg", video: null, badge:null, grad:"linear-gradient(135deg,#FF8F00,#E65100)", desc:"Caramel-infused sponge with golden butterscotch sauce and crunchy praline bits.", sizes:[{l:"500g · ₹549",p:"₹549",u:"500g"},{l:"1kg · ₹949",p:"₹949",u:"1kg"},{l:"1.5kg · ₹1,349",p:"₹1,349",u:"1.5kg"}], feats:["Butterscotch Sauce","Praline Crunch","Soft Sponge"], params:["Butterscotch Sauce","Praline Bits","100% Eggless"], egg:true },
-      { id:"fresh-fruit", name:"Fresh Fruit Delight", sub:"Seasonal fruits, whipped cream.", emoji:"🍊", photo: "public/Fresh Fruit Delight.jpeg", video: null, badge:{t:"Eggless",bg:"#22c55e",c:"#fff"}, grad:"linear-gradient(135deg,#2E7D32,#1B5E20)", desc:"Light vanilla sponge loaded with seasonal fresh fruits and whipped cream.", sizes:[{l:"500g · ₹599",p:"₹599",u:"500g"},{l:"1kg · ₹999",p:"₹999",u:"1kg"},{l:"1.5kg · ₹1,399",p:"₹1,399",u:"1.5kg"}], feats:["Seasonal Fruits","Whipped Cream","100% Eggless"], params:["100% Eggless","Fresh Fruits","Light Cream"], egg:true },
-      { id:"black-forest", name:"Black Forest", sub:"Cherry compote, chocolate shavings.", emoji:"🍒", photo: "public/Black Forest.jpeg", video: null, badge:null, grad:"linear-gradient(135deg,#3E2723,#1A1208)", desc:"Classic Black Forest with cherry compote, whipped cream, and dark chocolate shavings.", sizes:[{l:"500g · ₹599",p:"₹599",u:"500g"},{l:"1kg · ₹999",p:"₹999",u:"1kg"},{l:"1.5kg · ₹1,399",p:"₹1,399",u:"1.5kg"}], feats:["Cherry Compote","Choco Shavings","Whipped Cream"], params:["Cherry Compote","Dark Chocolate","100% Eggless"], egg:true },
+      { id:"blueberry-delight", name:"Blueberry Delight", sub:"Berry luscious.", emoji:"🫐", photo: "public/Blueberry Delight.png", video: "public/videos/blueberry_vid.mp4", badge:{t:"New",bg:"#8b5cf6",c:"#fff"}, grad:"linear-gradient(135deg,#4A148C,#311B92)", desc:"Vanilla sponge layered with wild blueberry compote and tangy cream cheese frosting.", sizes:[{l:"500g · ₹649",p:"₹649",u:"500g"}], feats:["Wild Blueberries","Vanilla Sponge","Cream Cheese"], params:["Wild Blueberries","Cream Cheese","100% Eggless"], egg:true },
+      { id:"red-velvet", name:"Red Velvet", sub:"Velvety perfection.", emoji:"❤️", photo: "public/Red Velvet.jpeg", video: "public/videos/red_velvet.mp4", badge:{t:"Popular",bg:"#f97316",c:"#000"}, grad:"linear-gradient(135deg,#C62828,#4A0000)", desc:"Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.", sizes:[{l:"500g · ₹749",p:"₹749",u:"500g"},{l:"1kg · ₹1,199",p:"₹1,199",u:"1kg"},{l:"1.5kg · ₹1,599",p:"₹1,599",u:"1.5kg"}], feats:["Cream Cheese Frosting","Velvety Texture","Premium Cocoa"], params:["Cream Cheese","Velvety Texture","100% Eggless"], egg:true },
+      { id:"belgian-dark", name:"Belgian Dark", sub:"Our signature masterpiece.", emoji:"🏆", photo: "public/Belgian Dark (Premium).jpeg", video: null, badge:{t:"Premium",bg:"#fff",c:"#000"}, grad:"linear-gradient(135deg,#1A1208,#000)", desc:"72% Belgian couverture, dark ganache drip, hand-tempered chocolate shards.", sizes:[{l:"500g · ₹899",p:"₹899",u:"500g"},{l:"1kg · ₹1,599",p:"₹1,599",u:"1kg"},{l:"1.5kg · ₹2,199",p:"₹2,199",u:"1.5kg"}], feats:["72% Belgian Cocoa","Dark Ganache Drip","Hand-Tempered Shards"], params:["72% Belgian Cocoa","Cold Crafted","Premium Finish"], egg:true },
       { id:"salted-caramel-cake", name:"Salted Caramel Cake", sub:"Caramelized sweet-salty harmony.", emoji:"🍮", photo: "public/Salted Caramel Cake.png", video: null, badge:{t:"New",bg:"#f57c00",c:"#fff"}, grad:"linear-gradient(135deg,#FFB74D,#F57C00)", desc:"Rich caramel-infused sponge layers with smooth salted caramel sauce, buttercream, and a touch of Maldon sea salt.", sizes:[{l:"500g · ₹649",p:"₹649",u:"500g"},{l:"1kg · ₹1,099",p:"₹1,099",u:"1kg"},{l:"1.5kg · ₹1,499",p:"₹1,499",u:"1.5kg"}], feats:["Salted Caramel","Buttercream","Sweet & Salty"], params:["Salted Caramel","100% Eggless","Premium Finish"], egg:true },
       { id:"golden-rocher", name:"Golden Rocher Cake", sub:"Hazelnut chocolate luxury.", emoji:"🌰", photo: "public/Golden Rocher Cake.jpg", video: null, badge:{t:"Premium",bg:"#CFB53B",c:"#000"}, grad:"linear-gradient(135deg,#CFB53B,#8C7853)", desc:"Rich hazelnut chocolate sponge, filled with Nutella glaze and crunchy wafers, crowned with golden Rocher chocolates.", sizes:[{l:"500g · ₹749",p:"₹749",u:"500g"},{l:"1kg · ₹1,299",p:"₹1,299",u:"1kg"},{l:"1.5kg · ₹1,799",p:"₹1,799",u:"1.5kg"}], feats:["Hazelnut Rocher","Nutella Glaze","Crunchy Wafers"], params:["Premium Cocoa","100% Eggless","Gold Sprinkles"], egg:true },
       { id:"biscoff-heaven", name:"Biscoff Heaven", sub:"Caramelized cookie magic.", emoji:"🍪", photo: "public/Biscoff Heaven.jpg", video: null, badge:{t:"Trending",bg:"#d97706",c:"#fff"}, grad:"linear-gradient(135deg,#D7CCC8,#8D6E63)", desc:"Spiced speculoos cookie sponge layered with smooth Lotus Biscoff spread and whipped cookie-butter cream, finished with crunchy Biscoff crumbles.", sizes:[{l:"500g · ₹649",p:"₹649",u:"500g"},{l:"1kg · ₹1,099",p:"₹1,099",u:"1kg"},{l:"1.5kg · ₹1,499",p:"₹1,499",u:"1.5kg"}], feats:["Lotus Biscoff","Cookie Butter","Crunchy Speculoos"], params:["Real Biscoff","100% Eggless","Cookie Crumbles"], egg:true },
       { id:"saffron-rasmalai", name:"Saffron Rasmalai Cake", sub:"Traditional luxury in a sponge.", emoji:"🥛", photo: "public/Saffron Rasmalai Cake.avif", video: null, badge:{t:"Festive Special",bg:"#f59e0b",c:"#000"}, grad:"linear-gradient(135deg,#F59E0B,#D97706)", desc:"Saffron and cardamom-infused sponge soaked in rich pistachio rabdi, topped with fresh cream, sliced almonds, pistachios, and dried rose petals.", sizes:[{l:"500g · ₹699",p:"₹699",u:"500g"},{l:"1kg · ₹1,199",p:"₹1,199",u:"1kg"},{l:"1.5kg · ₹1,599",p:"₹1,599",u:"1.5kg"}], feats:["Saffron & Cardamom","Pistachio Rabdi Soaked","Rose Petals & Nuts"], params:["Premium Rabdi","100% Eggless","Rich Saffron"], egg:true },
-      { id:"midnight-mousse", name:"Midnight Mousse", sub:"Rich chocolate velvet.", emoji:"🍫", photo: "public/Midnight Mousse.jpeg", video: null, badge:{t:"Chef's Special",bg:"#7c3aed",c:"#fff"}, grad:"linear-gradient(135deg,#2D1B4E,#1F1235)", desc:"Decadent layers of dark chocolate sponge and airy chocolate mousse, coated in a glossy chocolate glaze.", sizes:[{l:"500g · ₹649",p:"₹649",u:"500g"},{l:"1kg · ₹1,099",p:"₹1,099",u:"1kg"},{l:"1.5kg · ₹1,499",p:"₹1,499",u:"1.5kg"}], feats:["Dark Chocolate Mousse","Glazed Finish","Fluffy Sponge"], params:["Cold Crafted","100% Eggless","Belgian Cocoa"], egg:true },
       { id:"kitkat-krunch-blast", name:"KitKat Krunch Blast", sub:"Chocolate-wafer explosion.", emoji:"🍫", photo: "public/kitkat krunch blast.webp", video: null, badge:{t:"Crispy Delight",bg:"#dc2626",c:"#fff"}, grad:"linear-gradient(135deg,#d32f2f,#7b1fa2)", desc:"Crunchy wafer-infused chocolate sponge layered with creamy milk chocolate frosting, loaded with crushed KitKat bars and chocolate drizzle.", sizes:[{l:"500g · ₹649",p:"₹649",u:"500g"},{l:"1kg · ₹1,099",p:"₹1,099",u:"1kg"},{l:"1.5kg · ₹1,499",p:"₹1,499",u:"1.5kg"}], feats:["Crushed KitKat","Chocolate Wafers","Milk Chocolate Drizzle"], params:["Cracked KitKat","100% Eggless","Premium Frosting"], egg:true },
       { id:"oreo-obsession", name:"Oreo Obsession", sub:"Cookies & cream dream.", emoji:"🍪", photo: "public/Oreo Obsession.jpeg", video: null, badge:{t:"Kids' Favorite",bg:"#1e3a8a",c:"#fff"}, grad:"linear-gradient(135deg,#1E3A8A,#0D1B2A)", desc:"Rich dark chocolate sponge layered with crushed Oreo cookies and creamy vanilla cookies-and-cream buttercream, topped with whole Oreos.", sizes:[{l:"500g · ₹599",p:"₹599",u:"500g"},{l:"1kg · ₹999",p:"₹999",u:"1kg"},{l:"1.5kg · ₹1,399",p:"₹1,399",u:"1.5kg"}], feats:["Oreo Buttercream","Crushed Cookies","Dark Cocoa Sponge"], params:["Real Oreo Cookies","100% Eggless","Cookies & Cream"], egg:true },
       { id:"nutella-nirvana", name:"Nutella Nirvana", sub:"Hazelnut spread bliss.", emoji:"🌰", photo: "public/Nutella Nirvana.jpg", video: null, badge:{t:"Hazelnut Classic",bg:"#ea580c",c:"#fff"}, grad:"linear-gradient(135deg,#8D6E63,#4E342E)", desc:"Moist chocolate sponge filled with rich layers of authentic Nutella spread and hazelnut buttercream, topped with a luscious chocolate drip.", sizes:[{l:"500g · ₹749",p:"₹749",u:"500g"},{l:"1kg · ₹1,299",p:"₹1,299",u:"1kg"},{l:"1.5kg · ₹1,799",p:"₹1,799",u:"1.5kg"}], feats:["Authentic Nutella","Hazelnut Buttercream","Chocolate Drip"], params:["Real Nutella","100% Eggless","Hazelnut Crunch"], egg:true },
+      { id:"black-forest", name:"Black Forest", sub:"Cherry compote, chocolate shavings.", emoji:"🍒", photo: "public/Black Forest.jpeg", video: null, badge:null, grad:"linear-gradient(135deg,#3E2723,#1A1208)", desc:"Classic Black Forest with cherry compote, whipped cream, and dark chocolate shavings.", sizes:[{l:"500g · ₹599",p:"₹599",u:"500g"},{l:"1kg · ₹999",p:"₹999",u:"1kg"},{l:"1.5kg · ₹1,399",p:"₹1,399",u:"1.5kg"}], feats:["Cherry Compote","Choco Shavings","Whipped Cream"], params:["Cherry Compote","Dark Chocolate","100% Eggless"], egg:true },
     ];
 
-    let activeHero = 2;
+    const slideSequence = [1, 2, 7, 6]; // Strawberry Bliss, Classic Chocolate, Red Velvet, Blueberry Delight
+    let activeHero = slideSequence[0];
     let activeSizeIdx = 0;
     let activeVideoId = 1;
 
@@ -918,23 +915,21 @@
 
     function buildFlavorMenu() {
       const menu = document.getElementById('flavorMenu');
-      menu.innerHTML = cakes.map((c, i) => {
+      menu.innerHTML = slideSequence.map((cakeIdx) => {
+        const c = cakes[cakeIdx];
         if (!c.video) return '';
-        return `<button class="flavor-btn ${i === activeHero ? 'active' : ''}" data-cake-idx="${i}" onclick="setHero(${i})">
+        return `<button class="flavor-btn ${cakeIdx === activeHero ? 'active' : ''}" data-cake-idx="${cakeIdx}" onclick="setHero(${cakeIdx})">
           <span style="position:relative;z-index:1;">${c.name}</span>
-          <div class="btn-progress" id="prog-${i}"></div>
+          <div class="btn-progress" id="prog-${cakeIdx}"></div>
         </button>`;
       }).join('');
     }
 
     function getNextVideoIdx(currentIdx) {
-      let i = currentIdx + 1;
-      while (cakes[i] && !cakes[i].video) i++;
-      if (!cakes[i]) {
-        i = 0;
-        while (cakes[i] && !cakes[i].video) i++;
-      }
-      return i;
+      let seqIdx = slideSequence.indexOf(currentIdx);
+      if (seqIdx === -1) return slideSequence[0];
+      seqIdx = (seqIdx + 1) % slideSequence.length;
+      return slideSequence[seqIdx];
     }
 
     function preloadNextVideo() {

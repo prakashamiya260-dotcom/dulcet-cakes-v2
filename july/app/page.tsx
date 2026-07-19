@@ -325,7 +325,7 @@ const heroStats = [
 ];
 
 export default function Home() {
-    const slideSequence = [1, 2, 7, 6];
+    const slideSequence = [2, 1, 7, 6];
     const [activeHero, setActiveHero] = useState(slideSequence[0]);
     const [selectedSize, setSelectedSize] = useState(0);
     const videoRef1 = useRef<HTMLVideoElement>(null);

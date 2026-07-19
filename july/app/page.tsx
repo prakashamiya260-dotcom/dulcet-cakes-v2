@@ -578,7 +578,27 @@ export default function Home() {
                 </p>
             </section>
 
-            {/* ── Buy Now Section ── */}
+            {/* 📸 Ordered Cakes Carousel 📸 */}
+            <section className="ordered-carousel">
+                <h2 className="ordered-carousel-title">Ordered Cakes</h2>
+                <div className="marquee-wrapper">
+                    <div className="marquee-content">
+                        {/* Original set */}
+                        <div className="marquee-item"><img src="/ordered/20250129_010753.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/20250821_211010.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/IMG_20241011_171501_539.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/IMG_20250704_150406_145.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                        
+                        {/* Duplicated set for seamless infinite scrolling */}
+                        <div className="marquee-item"><img src="/ordered/20250129_010753.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/20250821_211010.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/IMG_20241011_171501_539.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/IMG_20250704_150406_145.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                    </div>
+                </div>
+            </section>
+
+            {/* 🛒 Buy Now Section 🛒 */}
             <motion.section
                 initial={{ opacity: 0, y: 80 }}
                 whileInView={{ opacity: 1, y: 0 }}

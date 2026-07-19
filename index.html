@@ -964,12 +964,12 @@
 
   <!-- Hero -->
   <section class="hero">
-    <video id="heroVideo" autoplay loop muted playsinline src="public/videos/hero.mp4"></video>
+    <video id="heroVideo" autoplay loop muted playsinline src="public/videos/strawberry_vid.mp4"></video>
     <div class="hero-overlay"></div>
     <div class="hero-content" id="heroContent">
-      <p class="hero-label" id="heroLabel">Decadence redefined.</p>
-      <h1 id="heroTitle">Classic Chocolate</h1>
-      <p class="hero-desc" id="heroDesc">Our signature dark chocolate couverture cake — rich, velvety, unforgettable.
+      <p class="hero-label" id="heroLabel">Berry beautiful.</p>
+      <h1 id="heroTitle">Strawberry Bliss</h1>
+      <p class="hero-desc" id="heroDesc">Real strawberry compote, cream cheese frosting, light vanilla sponge.
       </p>
       <div class="hero-btns">
         <a href="#" id="heroWaBtn" class="btn-hero-primary">
@@ -979,7 +979,7 @@
             <path
               d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.116 1.533 5.845L.057 23.428a.5.5 0 0 0 .515.57l5.775-1.513A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.373l-.36-.213-3.429.899.915-3.34-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.574 6.574 2.182 12 2.182c5.426 0 9.818 4.392 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z" />
           </svg>
-          <span id="heroWaBtnText">Order on WhatsApp — ₹599</span>
+          <span id="heroWaBtnText">Order on WhatsApp — ₹649</span>
         </a>
         <a href="#catalog" class="btn-hero-secondary">Explore More ↓</a>
       </div>
@@ -1113,8 +1113,8 @@
     const WA_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.116 1.533 5.845L.057 23.428a.5.5 0 0 0 .515.57l5.775-1.513A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>';
 
     const cakes = [
-      { id: "classic-chocolate", name: "Classic Chocolate", sub: "Decadence redefined.", emoji: "🍫", badge: { t: "Bestseller", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#4E342E,#212121)", desc: "Our signature dark chocolate couverture cake — rich, velvety, unforgettable.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Rich Dark Cocoa", "Moist Sponge", "Premium Ganache"], params: ["100% Eggless", "Freshly Baked", "Premium Cocoa"], egg: false },
       { id: "strawberry-bliss", name: "Strawberry Bliss", sub: "Berry beautiful.", emoji: "🍓", badge: { t: "New", bg: "#ec4899", c: "#fff" }, grad: "linear-gradient(135deg,#E53935,#B71C1C)", desc: "Real strawberry compote, cream cheese frosting, light vanilla sponge.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Fresh Berries", "Light Sponge", "Cream Cheese"], params: ["100% Eggless", "Real Fruits", "Light Cream"], egg: false },
+      { id: "classic-chocolate", name: "Classic Chocolate", sub: "Decadence redefined.", emoji: "🍫", badge: { t: "Bestseller", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#4E342E,#212121)", desc: "Our signature dark chocolate couverture cake — rich, velvety, unforgettable.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Rich Dark Cocoa", "Moist Sponge", "Premium Ganache"], params: ["100% Eggless", "Freshly Baked", "Premium Cocoa"], egg: false },
       { id: "vanilla-dream", name: "Vanilla Dream", sub: "Classic elegance.", emoji: "🍦", badge: null, grad: "linear-gradient(135deg,#F57F17,#E65100)", desc: "Madagascar vanilla bean sponge with silky buttercream frosting.", sizes: [{ l: "500g · ₹549", p: "₹549", u: "500g" }, { l: "1kg · ₹949", p: "₹949", u: "1kg" }, { l: "1.5kg · ₹1,349", p: "₹1,349", u: "1.5kg" }], feats: ["Madagascar Vanilla", "Buttercream", "Soft Crumb"], params: ["100% Eggless", "Real Vanilla", "Hand Whipped"], egg: false },
       { id: "red-velvet", name: "Red Velvet", sub: "Velvety perfection.", emoji: "❤️", badge: { t: "Popular", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#C62828,#4A0000)", desc: "Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.", sizes: [{ l: "500g · ₹699", p: "₹699", u: "500g" }, { l: "1kg · ₹1,199", p: "₹1,199", u: "1kg" }, { l: "1.5kg · ₹1,599", p: "₹1,599", u: "1.5kg" }], feats: ["Cream Cheese Frosting", "Velvety Texture", "Premium Cocoa"], params: ["100% Eggless", "Cream Cheese", "Natural Colour"], egg: false },
       { id: "belgian-dark", name: "Belgian Dark", sub: "Our signature masterpiece.", emoji: "🏆", badge: { t: "Premium", bg: "#fff", c: "#000" }, grad: "linear-gradient(135deg,#1A1208,#000)", desc: "72% Belgian couverture, dark ganache drip, hand-tempered chocolate shards.", sizes: [{ l: "500g · ₹899", p: "₹899", u: "500g" }, { l: "1kg · ₹1,599", p: "₹1,599", u: "1kg" }, { l: "1.5kg · ₹2,199", p: "₹2,199", u: "1.5kg" }], feats: ["72% Belgian Cocoa", "Dark Ganache Drip", "Hand-Tempered Shards"], params: ["100% Eggless", "72% Belgian Cocoa", "Premium Finish"], egg: false },

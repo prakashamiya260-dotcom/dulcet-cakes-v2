@@ -355,7 +355,7 @@ export default function Home() {
 
         // If first load, play first video explicitly since autoPlay is removed
         if (!v1.src || v1.src === window.location.href) {
-            v1.src = cakes[0].video || "/videos/hero.mp4";
+            v1.src = hero.video || "/videos/hero.mp4";
             v1.load();
             v1.play().catch(console.error);
             return;

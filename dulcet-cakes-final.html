@@ -54,17 +54,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 16px 40px;
-      background: rgba(0, 0, 0, 0.55);
+      padding: 12px 32px;
+      background: rgba(0, 0, 0, 0.65);
       backdrop-filter: blur(24px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      min-height: 72px;
     }
 
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 16px;
     }
 
     .nav-logo-img {
@@ -72,7 +71,7 @@
       height: 64px;
       border-radius: 50%;
       object-fit: contain;
-      background: rgba(249, 115, 22, 0.15);
+      background: rgba(249, 115, 22, 0.2);
       border: 2px solid rgba(249, 115, 22, 0.4);
       display: flex;
       align-items: center;
@@ -82,15 +81,32 @@
       color: #fb923c;
       overflow: hidden;
       flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 
     .nav-logo-text {
-      font-size: 1.45rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .nav-logo-title {
+      font-size: 1.6rem;
       font-weight: 800;
       letter-spacing: -0.5px;
       background: linear-gradient(to right, #fb923c, #ec4899);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+
+    .nav-logo-subtitle {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #22c55e;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 2px;
     }
 
     .btn-wa-nav {
@@ -122,10 +138,11 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 100px 24px 60px;
+      padding: 140px 20px 80px;
       position: relative;
       overflow: hidden;
       background: #1a1208;
+      transition: background 1s ease-in-out;
     }
 
     .hero video {
@@ -135,14 +152,22 @@
       height: 100%;
       object-fit: cover;
       z-index: 0;
+      filter: brightness(1.15);
+    }
+
+    @media (max-width: 768px) {
+      .hero video {
+        height: 60%;
+        top: 20%;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+      }
     }
 
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background:
-        linear-gradient(to bottom, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.30) 40%, rgba(0, 0, 0, 0.80) 100%),
-        radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.45) 100%);
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.4) 100%);
       z-index: 1;
     }
 
@@ -151,7 +176,7 @@
       z-index: 2;
       max-width: 800px;
       margin: 0 auto;
-      transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.5s ease-in-out;
     }
 
     .hero-label {
@@ -161,24 +186,27 @@
       letter-spacing: 0.4em;
       color: #fdba74;
       margin-bottom: 16px;
+      text-shadow: 0 0 20px rgba(253, 186, 116, 0.8), 0 2px 8px rgba(0, 0, 0, 0.6);
     }
 
     .hero h1 {
+      color: #ffffff;
       font-size: clamp(3rem, 7vw, 8rem);
       font-weight: 900;
       letter-spacing: -2px;
       line-height: 1;
       margin-bottom: 20px;
-      text-shadow: 0 4px 40px rgba(0, 0, 0, 0.6);
+      text-shadow: 0 2px 30px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 0, 0, 0.5), 0 0 4px rgba(255,255,255,0.3);
     }
 
     .hero-desc {
       font-size: 1.1rem;
-      color: #d1d5db;
+      color: #f3f4f6;
       margin-bottom: 32px;
       max-width: 480px;
       margin-left: auto;
       margin-right: auto;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
     }
 
     .hero-btns {
@@ -203,6 +231,12 @@
       text-decoration: none;
       transition: all 0.2s;
       font-family: 'Outfit', sans-serif;
+      line-height: 1;
+    }
+
+    .btn-hero-primary svg {
+      display: block;
+      flex-shrink: 0;
     }
 
     .btn-hero-primary:hover {
@@ -291,6 +325,9 @@
       border-radius: 24px;
       overflow: hidden;
       transition: all 0.5s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .card:hover {
@@ -304,13 +341,27 @@
       width: 100%;
     }
 
-    .card-img {
+    /* Support for real photos */
+    .card-media {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .card-img-placeholder {
       aspect-ratio: 1;
       display: flex;
       align-items: center;
       justify-content: center;
       font-size: 4rem;
       position: relative;
+    }
+
+    .card-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
     }
 
     .card-badge {
@@ -327,6 +378,9 @@
 
     .card-body {
       padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
     }
 
     .card-top {
@@ -383,7 +437,8 @@
     }
 
     .eggless-badge {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
       font-size: 0.72rem;
       padding: 4px 12px;
       border-radius: 50px;
@@ -391,6 +446,7 @@
       border: 1px solid rgba(34, 197, 94, 0.3);
       color: #4ade80;
       margin-bottom: 10px;
+      font-weight: 700;
     }
 
     .btn-wa-card {
@@ -407,22 +463,29 @@
       transition: all 0.2s;
       font-family: 'Outfit', sans-serif;
       font-size: 0.9rem;
+      margin-top: auto;
+      line-height: 1;
+    }
+
+    .btn-wa-card svg {
+      display: block;
+      flex-shrink: 0;
     }
 
     .btn-wa-card:hover {
       transform: scale(1.03);
     }
 
-    .eggless-note {
+    .eggless-global-banner {
       text-align: center;
-      margin-top: 48px;
-      font-size: 0.88rem;
-      color: #6b7280;
-    }
-
-    .eggless-note .hl {
+      font-size: 1.1rem;
+      font-weight: 700;
       color: #4ade80;
-      font-weight: 600;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
     }
 
     /* Buy Now */
@@ -653,18 +716,20 @@
       transition: color 0.2s;
     }
 
+    .footer-contact-item a:hover {
+      color: white;
+    }
+
     @keyframes popHighlight {
       0% {
         transform: scale(1);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
       }
-
       50% {
         transform: scale(1.05);
         box-shadow: 0 0 35px rgba(249, 115, 22, 0.7);
         border-color: #fb923c;
       }
-
       100% {
         transform: scale(1);
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -680,10 +745,6 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 32px;
-    }
-
-    .footer-contact-item a:hover {
-      color: white;
     }
 
     .delivery-areas {
@@ -733,6 +794,20 @@
       font-family: 'Outfit', sans-serif;
       transition: all 0.3s;
       white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flavor-btn .btn-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      width: 0%;
+      z-index: 0;
+      pointer-events: none;
+      transition: width 0.1s linear;
     }
 
     .flavor-btn:hover {
@@ -747,187 +822,131 @@
     }
 
     @media (max-width: 768px) {
-
-      /* Navbar mobile */
       .nav {
         padding: 10px 16px;
-        min-height: 52px;
-      }
-
-      .nav-logo {
-        gap: 10px;
       }
 
       .nav-logo-img {
-        width: 40px !important;
-        height: 40px !important;
-        font-size: 1rem;
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
       }
 
-      .nav-logo-img img {
-        width: 32px !important;
-        height: 32px !important;
+      .nav-logo-title {
+        font-size: 1.3rem;
       }
 
-      .nav-logo-text {
-        font-size: 1.05rem;
+      .nav-logo-subtitle {
+        font-size: 0.6rem;
       }
 
       .btn-wa-nav {
         padding: 8px 16px;
-        font-size: 0.78rem;
-        gap: 6px;
+        font-size: 0.8rem;
       }
 
-      .btn-wa-nav svg {
-        width: 13px;
-        height: 13px;
-      }
-
-      /* Hero mobile */
       .hero {
-        min-height: 100svh;
-        padding: 72px 20px 50px;
+        padding: 110px 16px 60px;
       }
 
       .hero h1 {
-        font-size: clamp(2.4rem, 11vw, 3.6rem);
-        letter-spacing: -1px;
-        margin-bottom: 14px;
-      }
-
-      .hero-label {
-        font-size: 0.68rem;
-        letter-spacing: 0.25em;
-        margin-bottom: 10px;
+        font-size: clamp(2.5rem, 12vw, 4rem);
+        margin-bottom: 12px;
       }
 
       .hero-desc {
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin-bottom: 24px;
-        max-width: 300px;
-      }
-
-      .hero-btns {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 24px;
+        padding: 0 10px;
       }
 
       .btn-hero-primary {
-        padding: 14px 28px;
-        font-size: 0.9rem;
         width: 100%;
-        max-width: 300px;
         justify-content: center;
+        padding: 14px 20px;
+        font-size: 1rem;
       }
 
       .btn-hero-secondary {
-        padding: 12px 24px;
-        font-size: 0.85rem;
+        width: 100%;
       }
 
-      /* Stats mobile */
       .stats-bar {
-        gap: 16px;
-        padding: 12px 18px;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px;
         flex-wrap: nowrap;
-        max-width: calc(100vw - 40px);
       }
 
       .stat-val {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
       }
 
       .stat-label {
-        font-size: 0.58rem;
+        font-size: 0.55rem;
+        letter-spacing: 1px;
       }
 
-      /* Grid */
       .grid {
         grid-template-columns: 1fr;
         gap: 20px;
       }
 
-      /* Buy section */
-      .buynow-inner {
-        padding: 36px 20px;
+      .buynow {
+        padding: 60px 16px;
       }
 
-      .buynow-label {
-        font-size: 1.3rem;
+      .buynow-card {
+        border-radius: 32px;
+      }
+
+      .buynow-inner {
+        padding: 32px 20px;
+        border-radius: 31px;
       }
 
       .buynow-price {
         font-size: 3.5rem;
       }
 
-      .buynow-unit {
-        font-size: 0.85rem;
-      }
-
-      .size-selector {
-        gap: 6px;
-      }
-
-      .size-btn {
-        padding: 8px 14px;
-        font-size: 0.7rem;
-      }
-
       .btn-wa-big {
-        padding: 16px 28px;
-        font-size: 1.1rem;
+        width: 100%;
+        justify-content: center;
+        padding: 16px 20px;
+        font-size: 1.2rem;
       }
 
       .buynow-promises {
         grid-template-columns: 1fr;
+        gap: 24px;
       }
 
-      /* Footer */
+      .footer {
+        padding: 40px 16px 20px;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 32px;
       }
 
       .footer-grid h4.mobile-hide {
         display: none;
       }
 
-      /* Flavor menu */
       .flavor-menu {
-        bottom: 10px;
-        padding: 4px 6px;
+        width: 100%;
+        padding: 6px;
+        bottom: 12px;
+        justify-content: flex-start;
+        border-radius: 12px;
       }
 
       .flavor-btn {
-        padding: 6px 9px;
-        font-size: 0.65rem;
-      }
-    }
-
-    @media (max-width: 380px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
-
-      .nav-logo-text {
-        font-size: 0.92rem;
-      }
-
-      .btn-wa-nav {
-        padding: 7px 12px;
-        font-size: 0.7rem;
-      }
-
-      .stats-bar {
-        gap: 10px;
-        padding: 10px 12px;
-      }
-
-      .stat-val {
-        font-size: 1rem;
+        font-size: 0.85rem;
+        padding: 8px 14px;
+        flex-shrink: 0;
       }
     }
   </style>
@@ -944,11 +963,14 @@
     <div class="nav-logo">
       <div class="nav-logo-img" id="logoWrap">
         <!-- If logo.png exists in public/, it shows. Otherwise shows "D" -->
-        <img src="public/logo.png" alt="Logo" style="width:56px;height:56px;object-fit:contain;border-radius:50%;"
+        <img src="public/logo.png" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"
           onerror="this.style.display='none';document.getElementById('logoFallback').style.display='block'">
         <span id="logoFallback" style="display:none;">D</span>
       </div>
-      <span class="nav-logo-text">Dulcet Cakes</span>
+      <div class="nav-logo-text">
+        <div class="nav-logo-title">Dulcet Cakes</div>
+        <div class="nav-logo-subtitle">100% Eggless 🌿</div>
+      </div>
     </div>
     <a href="https://wa.me/919999789502?text=Hi%20Dulcet%20Cakes!%20I%20would%20like%20to%20place%20an%20order."
       target="_blank" class="btn-wa-nav">
@@ -964,15 +986,18 @@
 
   <!-- Hero -->
   <section class="hero">
-    <video id="heroVideo" autoplay loop muted playsinline src="public/videos/hero.mp4"></video>
-    <div class="hero-overlay"></div>
+    <video id="heroVideo1" muted playsinline preload="auto" src="public/videos/strawberry_vid.mp4"
+      style="background: #1a1208; position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; z-index: 1; transition: opacity 1s ease-in-out; opacity: 1;"></video>
+    <video id="heroVideo2" muted playsinline preload="auto"
+      style="background: transparent; position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; z-index: 2; transition: opacity 1s ease-in-out; opacity: 0;"></video>
+    <div class="hero-overlay" style="z-index: 3;"></div>
     <div class="hero-content" id="heroContent">
-      <p class="hero-label" id="heroLabel">Decadence redefined.</p>
-      <h1 id="heroTitle">Classic Chocolate</h1>
-      <p class="hero-desc" id="heroDesc">Our signature dark chocolate couverture cake — rich, velvety, unforgettable.
+      <p class="hero-label" id="heroLabel">Berry beautiful.</p>
+      <h1 id="heroTitle">Strawberry Bliss</h1>
+      <p class="hero-desc" id="heroDesc">Real strawberry compote, cream cheese frosting, light vanilla sponge.
       </p>
       <div class="hero-btns">
-        <a href="#" id="heroWaBtn" class="btn-hero-primary">
+        <a href="https://wa.me/919999789502?text=Hi%20Dulcet%20Cakes!%20%F0%9F%8E%82%20I'd%20like%20to%20order%20a%20*Strawberry%20Bliss*%20(%E2%82%B9649).%20Please%20confirm%20availability." target="_blank" id="heroWaBtn" class="btn-hero-primary">
           <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
             <path
               d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -1004,11 +1029,12 @@
 
   <!-- Catalog -->
   <section class="catalog" id="catalog">
+    <div class="eggless-global-banner">
+      🌿 100% Pure Eggless Bakery
+    </div>
     <h2 class="catalog-title">Our Cakes</h2>
     <p class="catalog-sub">Handcrafted for every occasion</p>
     <div class="grid" id="cakeGrid"></div>
-    <p class="eggless-note">🌿 <span class="hl">All our cakes are 100% Eggless</span> — pure vegetarian, handcrafted
-      with premium ingredients. No eggs, no compromise on taste.</p>
   </section>
 
   <!-- Buy Now -->
@@ -1092,12 +1118,9 @@
       <div>
         <h4>Get in Touch</h4>
         <div class="footer-contact-item">📞 <a href="tel:+919999789502">+91 99997 89502</a></div>
-        <div class="footer-contact-item">💬 WhatsApp: <a href="https://wa.me/919999789502" target="_blank">+91 99997
-            89502</a></div>
+        <div class="footer-contact-item">💬 WhatsApp: <a href="https://wa.me/919999789502" target="_blank">+91 99997 89502</a></div>
         <div class="footer-contact-item">📧 <a href="mailto:dulcetcakes100@gmail.com">dulcetcakes100@gmail.com</a></div>
-        <div class="footer-contact-item">📍 <a
-            href="https://maps.google.com/?q=Dulcet+Cakes,+A/139,+housing+board+colony,+kankarbagh,+patna,+800020"
-            target="_blank" rel="noopener noreferrer">Kankarbagh, Patna</a></div>
+        <div class="footer-contact-item">📍 <a href="https://maps.google.com/?q=Dulcet+Cakes,+A/139,+housing+board+colony,+kankarbagh,+patna,+800020" target="_blank" rel="noopener noreferrer">Kankarbagh, Patna</a></div>
       </div>
     </div>
     <div class="footer-bottom">© 2026 Dulcet Cakes. All rights reserved. Handcrafted with ❤️ in Patna.</div>
@@ -1106,25 +1129,35 @@
   <!-- Bottom Flavor Menu -->
   <div class="flavor-menu" id="flavorMenu"></div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
     const WA = "919999789502";
     function waLink(msg) { return "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg); }
     const WA_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.116 1.533 5.845L.057 23.428a.5.5 0 0 0 .515.57l5.775-1.513A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>';
 
     const cakes = [
-      { id: "classic-chocolate", name: "Classic Chocolate", sub: "Decadence redefined.", emoji: "🍫", badge: { t: "Bestseller", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#4E342E,#212121)", desc: "Our signature dark chocolate couverture cake — rich, velvety, unforgettable.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Rich Dark Cocoa", "Moist Sponge", "Premium Ganache"], params: ["100% Eggless", "Freshly Baked", "Premium Cocoa"], egg: false },
-      { id: "strawberry-bliss", name: "Strawberry Bliss", sub: "Berry beautiful.", emoji: "🍓", badge: { t: "New", bg: "#ec4899", c: "#fff" }, grad: "linear-gradient(135deg,#E53935,#B71C1C)", desc: "Real strawberry compote, cream cheese frosting, light vanilla sponge.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Fresh Berries", "Light Sponge", "Cream Cheese"], params: ["100% Eggless", "Real Fruits", "Light Cream"], egg: false },
-      { id: "vanilla-dream", name: "Vanilla Dream", sub: "Classic elegance.", emoji: "🍦", badge: null, grad: "linear-gradient(135deg,#F57F17,#E65100)", desc: "Madagascar vanilla bean sponge with silky buttercream frosting.", sizes: [{ l: "500g · ₹549", p: "₹549", u: "500g" }, { l: "1kg · ₹949", p: "₹949", u: "1kg" }, { l: "1.5kg · ₹1,349", p: "₹1,349", u: "1.5kg" }], feats: ["Madagascar Vanilla", "Buttercream", "Soft Crumb"], params: ["100% Eggless", "Real Vanilla", "Hand Whipped"], egg: false },
-      { id: "red-velvet", name: "Red Velvet", sub: "Velvety perfection.", emoji: "❤️", badge: { t: "Popular", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#C62828,#4A0000)", desc: "Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.", sizes: [{ l: "500g · ₹699", p: "₹699", u: "500g" }, { l: "1kg · ₹1,199", p: "₹1,199", u: "1kg" }, { l: "1.5kg · ₹1,599", p: "₹1,599", u: "1.5kg" }], feats: ["Cream Cheese Frosting", "Velvety Texture", "Premium Cocoa"], params: ["100% Eggless", "Cream Cheese", "Natural Colour"], egg: false },
-      { id: "belgian-dark", name: "Belgian Dark", sub: "Our signature masterpiece.", emoji: "🏆", badge: { t: "Premium", bg: "#fff", c: "#000" }, grad: "linear-gradient(135deg,#1A1208,#000)", desc: "72% Belgian couverture, dark ganache drip, hand-tempered chocolate shards.", sizes: [{ l: "500g · ₹899", p: "₹899", u: "500g" }, { l: "1kg · ₹1,599", p: "₹1,599", u: "1kg" }, { l: "1.5kg · ₹2,199", p: "₹2,199", u: "1.5kg" }], feats: ["72% Belgian Cocoa", "Dark Ganache Drip", "Hand-Tempered Shards"], params: ["100% Eggless", "72% Belgian Cocoa", "Premium Finish"], egg: false },
-      { id: "butterscotch", name: "Butterscotch Crunch", sub: "Caramel sponge, crunchy praline.", emoji: "🍯", badge: null, grad: "linear-gradient(135deg,#FF8F00,#E65100)", desc: "Caramel-infused sponge with golden butterscotch sauce and crunchy praline bits.", sizes: [{ l: "500g · ₹549", p: "₹549", u: "500g" }, { l: "1kg · ₹949", p: "₹949", u: "1kg" }, { l: "1.5kg · ₹1,349", p: "₹1,349", u: "1.5kg" }], feats: ["Butterscotch Sauce", "Praline Crunch", "Soft Sponge"], params: ["100% Eggless", "Butterscotch Sauce", "Praline Bits"], egg: false },
-      { id: "fresh-fruit", name: "Fresh Fruit Delight", sub: "Seasonal fruits, whipped cream.", emoji: "🍊", photo: "public/fresh_fruit_delight.png", badge: { t: "Fresh", bg: "#22c55e", c: "#fff" }, grad: "linear-gradient(135deg,#2E7D32,#1B5E20)", desc: "Light vanilla sponge loaded with seasonal fresh fruits and whipped cream.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Seasonal Fruits", "Whipped Cream", "Light Sponge"], params: ["100% Eggless", "Fresh Fruits", "Light Cream"], egg: true },
-      { id: "black-forest", name: "Black Forest", sub: "Cherry compote, chocolate shavings.", emoji: "🍒", badge: null, grad: "linear-gradient(135deg,#3E2723,#1A1208)", desc: "Classic Black Forest with cherry compote, whipped cream, and dark chocolate shavings.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Cherry Compote", "Choco Shavings", "Whipped Cream"], params: ["100% Eggless", "Cherry Compote", "Dark Chocolate"], egg: false },
+      // To use a real photo, set photo: "public/c1.jpg". Set photo: null to use the gradient+emoji fallback.
+      { id: "strawberry-bliss", name: "Strawberry Bliss", sub: "Berry beautiful.", emoji: "🍓", photo: "public/Strawberry Bliss.jpeg", video: "public/videos/strawberry_vid.mp4", badge: { t: "New", bg: "#ec4899", c: "#fff" }, grad: "linear-gradient(135deg,#E53935,#B71C1C)", desc: "Real strawberry compote, cream cheese frosting, light vanilla sponge.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Fresh Berries", "Light Sponge", "Cream Cheese"], params: ["Real Fruits", "Light Cream", "100% Eggless"], egg: true },
+      { id: "vanilla-dream", name: "Vanilla Dream", sub: "Classic elegance.", emoji: "🍦", photo: "public/Vanilla Dream.jpeg", video: null, badge: null, grad: "linear-gradient(135deg,#F57F17,#E65100)", desc: "Madagascar vanilla bean sponge with silky buttercream frosting.", sizes: [{ l: "500g · ₹549", p: "₹549", u: "500g" }, { l: "1kg · ₹949", p: "₹949", u: "1kg" }, { l: "1.5kg · ₹1,349", p: "₹1,349", u: "1.5kg" }], feats: ["Madagascar Vanilla", "Buttercream", "Soft Crumb"], params: ["Real Vanilla", "Hand Whipped", "100% Eggless"], egg: true },
+      { id: "classic-chocolate", name: "Classic Chocolate", sub: "Decadence redefined.", emoji: "🍫", photo: "public/Classic Chocolate.jpeg", video: "public/videos/hero.mp4", badge: { t: "Bestseller", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#4E342E,#212121)", desc: "Our signature dark chocolate couverture cake — rich, velvety, unforgettable.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Rich Dark Cocoa", "Moist Sponge", "Premium Ganache"], params: ["Freshly Baked", "100% Eggless", "Premium Cocoa"], egg: true },
+      { id: "red-velvet", name: "Red Velvet", sub: "Velvety perfection.", emoji: "❤️", photo: "public/Red Velvet.jpeg", video: "public/videos/red_velvet.mp4", badge: { t: "Popular", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#C62828,#4A0000)", desc: "Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.", sizes: [{ l: "500g · ₹749", p: "₹749", u: "500g" }, { l: "1kg · ₹1,199", p: "₹1,199", u: "1kg" }, { l: "1.5kg · ₹1,599", p: "₹1,599", u: "1.5kg" }], feats: ["Cream Cheese Frosting", "Velvety Texture", "Premium Cocoa"], params: ["Cream Cheese", "Velvety Texture", "100% Eggless"], egg: true },
+      { id: "blueberry-delight", name: "Blueberry Delight", sub: "Berry luscious.", emoji: "🫐", photo: "public/Blueberry Delight.png", video: "public/videos/blueberry_vid.mp4", badge: { t: "New", bg: "#8b5cf6", c: "#fff" }, grad: "linear-gradient(135deg,#4A148C,#311B92)", desc: "Vanilla sponge layered with wild blueberry compote and tangy cream cheese frosting.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }], feats: ["Wild Blueberries", "Vanilla Sponge", "Cream Cheese"], params: ["Wild Blueberries", "Cream Cheese", "100% Eggless"], egg: true },
+      { id: "belgian-dark", name: "Belgian Dark", sub: "Our signature masterpiece.", emoji: "🏆", photo: "public/Belgian Dark (Premium).jpeg", video: null, badge: { t: "Premium", bg: "#fff", c: "#000" }, grad: "linear-gradient(135deg,#1A1208,#000)", desc: "72% Belgian couverture, dark ganache drip, hand-tempered chocolate shards.", sizes: [{ l: "500g · ₹899", p: "₹899", u: "500g" }, { l: "1kg · ₹1,599", p: "₹1,599", u: "1kg" }, { l: "1.5kg · ₹2,199", p: "₹2,199", u: "1.5kg" }], feats: ["72% Belgian Cocoa", "Dark Ganache Drip", "Hand-Tempered Shards"], params: ["72% Belgian Cocoa", "Cold Crafted", "Premium Finish"], egg: true },
+      { id: "butterscotch", name: "Butterscotch Crunch", sub: "Caramel sponge, crunchy praline.", emoji: "🍯", photo: "public/Butterscotch Crunch.jpeg", video: null, badge: null, grad: "linear-gradient(135deg,#FF8F00,#E65100)", desc: "Caramel-infused sponge with golden butterscotch sauce and crunchy praline bits.", sizes: [{ l: "500g · ₹549", p: "₹549", u: "500g" }, { l: "1kg · ₹949", p: "₹949", u: "1kg" }, { l: "1.5kg · ₹1,349", p: "₹1,349", u: "1.5kg" }], feats: ["Butterscotch Sauce", "Praline Crunch", "Soft Sponge"], params: ["Butterscotch Sauce", "Praline Bits", "100% Eggless"], egg: true },
+      { id: "fresh-fruit", name: "Fresh Fruit Delight", sub: "Seasonal fruits, whipped cream.", emoji: "🍊", photo: "public/fresh_fruit_delight.jpeg", video: null, badge: { t: "Eggless", bg: "#22c55e", c: "#fff" }, grad: "linear-gradient(135deg,#2E7D32,#1B5E20)", desc: "Light vanilla sponge loaded with seasonal fresh fruits and whipped cream.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Seasonal Fruits", "Whipped Cream", "100% Eggless"], params: ["100% Eggless", "Fresh Fruits", "Light Cream"], egg: true },
+      { id: "black-forest", name: "Black Forest", sub: "Cherry compote, chocolate shavings.", emoji: "🍒", photo: "public/Black Forest.jpeg", video: null, badge: null, grad: "linear-gradient(135deg,#3E2723,#1A1208)", desc: "Classic Black Forest with cherry compote, whipped cream, and dark chocolate shavings.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Cherry Compote", "Choco Shavings", "Whipped Cream"], params: ["Cherry Compote", "Dark Chocolate", "100% Eggless"], egg: true },
+      { id: "salted-caramel-cake", name: "Salted Caramel Cake", sub: "Caramelized sweet-salty harmony.", emoji: "🍮", photo: "public/Salted Caramel Cake.png", video: null, badge: { t: "New", bg: "#f57c00", c: "#fff" }, grad: "linear-gradient(135deg,#FFB74D,#F57C00)", desc: "Rich caramel-infused sponge layers with smooth salted caramel sauce, buttercream, and a touch of Maldon sea salt.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Salted Caramel", "Buttercream", "Sweet & Salty"], params: ["Salted Caramel", "100% Eggless", "Premium Finish"], egg: true },
+      { id: "golden-rocher", name: "Golden Rocher Cake", sub: "Hazelnut chocolate luxury.", emoji: "🌰", photo: "public/Golden Rocher Cake.jpg", video: null, badge: { t: "Premium", bg: "#CFB53B", c: "#000" }, grad: "linear-gradient(135deg,#CFB53B,#8C7853)", desc: "Rich hazelnut chocolate sponge, filled with Nutella glaze and crunchy wafers, crowned with golden Rocher chocolates.", sizes: [{ l: "500g · ₹749", p: "₹749", u: "500g" }, { l: "1kg · ₹1,299", p: "₹1,299", u: "1kg" }, { l: "1.5kg · ₹1,799", p: "₹1,799", u: "1.5kg" }], feats: ["Hazelnut Rocher", "Nutella Glaze", "Crunchy Wafers"], params: ["Premium Cocoa", "100% Eggless", "Gold Sprinkles"], egg: true },
+      { id: "biscoff-heaven", name: "Biscoff Heaven", sub: "Caramelized cookie magic.", emoji: "🍪", photo: "public/Biscoff Heaven.jpg", video: null, badge: { t: "Trending", bg: "#d97706", c: "#fff" }, grad: "linear-gradient(135deg,#D7CCC8,#8D6E63)", desc: "Spiced speculoos cookie sponge layered with smooth Lotus Biscoff spread and whipped cookie-butter cream, finished with crunchy Biscoff crumbles.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Lotus Biscoff", "Cookie Butter", "Crunchy Speculoos"], params: ["Real Biscoff", "100% Eggless", "Cookie Crumbles"], egg: true },
+      { id: "saffron-rasmalai", name: "Saffron Rasmalai Cake", sub: "Traditional luxury in a sponge.", emoji: "🥛", photo: "public/Saffron Rasmalai Cake.avif", video: null, badge: { t: "Festive Special", bg: "#f59e0b", c: "#000" }, grad: "linear-gradient(135deg,#F59E0B,#D97706)", desc: "Saffron and cardamom-infused sponge soaked in rich pistachio rabdi, topped with fresh cream, sliced almonds, pistachios, and dried rose petals.", sizes: [{ l: "500g · ₹699", p: "₹699", u: "500g" }, { l: "1kg · ₹1,199", p: "₹1,199", u: "1kg" }, { l: "1.5kg · ₹1,599", p: "₹1,599", u: "1.5kg" }], feats: ["Saffron & Cardamom", "Pistachio Rabdi Soaked", "Rose Petals & Nuts"], params: ["Premium Rabdi", "100% Eggless", "Rich Saffron"], egg: true },
+      { id: "midnight-mousse", name: "Midnight Mousse", sub: "Rich chocolate velvet.", emoji: "🍫", photo: "public/Midnight Mousse.jpeg", video: null, badge: { t: "Chef's Special", bg: "#7c3aed", c: "#fff" }, grad: "linear-gradient(135deg,#2D1B4E,#1F1235)", desc: "Decadent layers of dark chocolate sponge and airy chocolate mousse, coated in a glossy chocolate glaze.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Dark Chocolate Mousse", "Glazed Finish", "Fluffy Sponge"], params: ["Cold Crafted", "100% Eggless", "Belgian Cocoa"], egg: true },
+      { id: "kitkat-krunch-blast", name: "KitKat Krunch Blast", sub: "Chocolate-wafer explosion.", emoji: "🍫", photo: "public/kitkat krunch blast.webp", video: null, badge: { t: "Crispy Delight", bg: "#dc2626", c: "#fff" }, grad: "linear-gradient(135deg,#d32f2f,#7b1fa2)", desc: "Crunchy wafer-infused chocolate sponge layered with creamy milk chocolate frosting, loaded with crushed KitKat bars and chocolate drizzle.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Crushed KitKat", "Chocolate Wafers", "Milk Chocolate Drizzle"], params: ["Cracked KitKat", "100% Eggless", "Premium Frosting"], egg: true },
+      { id: "oreo-obsession", name: "Oreo Obsession", sub: "Cookies & cream dream.", emoji: "🍪", photo: "public/Oreo Obsession.jpeg", video: null, badge: { t: "Kids' Favorite", bg: "#1e3a8a", c: "#fff" }, grad: "linear-gradient(135deg,#1E3A8A,#0D1B2A)", desc: "Rich dark chocolate sponge layered with crushed Oreo cookies and creamy vanilla cookies-and-cream buttercream, topped with whole Oreos.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Oreo Buttercream", "Crushed Cookies", "Dark Cocoa Sponge"], params: ["Real Oreo Cookies", "100% Eggless", "Cookies & Cream"], egg: true },
+      { id: "nutella-nirvana", name: "Nutella Nirvana", sub: "Hazelnut spread bliss.", emoji: "🌰", photo: "public/Nutella Nirvana.jpg", video: null, badge: { t: "Hazelnut Classic", bg: "#ea580c", c: "#fff" }, grad: "linear-gradient(135deg,#8D6E63,#4E342E)", desc: "Moist chocolate sponge filled with rich layers of authentic Nutella spread and hazelnut buttercream, topped with a luscious chocolate drip.", sizes: [{ l: "500g · ₹749", p: "₹749", u: "500g" }, { l: "1kg · ₹1,299", p: "₹1,299", u: "1kg" }, { l: "1.5kg · ₹1,799", p: "₹1,799", u: "1.5kg" }], feats: ["Authentic Nutella", "Hazelnut Buttercream", "Chocolate Drip"], params: ["Real Nutella", "100% Eggless", "Hazelnut Crunch"], egg: true },
     ];
 
-    let activeHero = 0;
+    let activeHero = 1;
     let activeSizeIdx = 0;
+    let activeVideoId = 1;
 
     function highlightCake(cakeId) {
       const card = document.getElementById('cake-' + cakeId);
@@ -1147,9 +1180,12 @@
       grid.innerHTML = cakes.map((c, i) => `
     <div class="card" id="cake-${c.id}">
       <div class="card-accent" style="background:${c.grad}"></div>
-      <div class="card-img" style="background:${c.grad}">
-        ${c.badge ? `<span class="card-badge" style="background:${c.badge.bg};color:${c.badge.c}">${c.badge.t}</span>` : ''}
-        ${c.emoji}
+      <div class="card-media">
+        ${c.badge ? `<span class="card-badge" style="background:${c.badge.bg};color:${c.badge.c};z-index:10;">${c.badge.t}</span>` : ''}
+        ${c.photo
+          ? `<img src="${c.photo}" class="card-photo" style="display:block;" alt="${c.name}">`
+          : `<div class="card-img-placeholder" style="background:${c.grad}">${c.emoji}</div>`
+        }
       </div>
       <div class="card-body">
         <div class="card-top">
@@ -1158,7 +1194,8 @@
         </div>
         <p class="card-desc">${c.desc}</p>
         <p class="card-sizes">${c.sizes.map(s => s.l).join(' &nbsp;|&nbsp; ')}</p>
-        <div class="card-features"><span class="card-feat" style="background:rgba(34,197,94,0.15);border-color:rgba(34,197,94,0.3);color:#4ade80">🌿 100% Eggless</span>${c.feats.map(f => `<span class="card-feat">${f}</span>`).join('')}</div>
+        ${c.egg ? '<span class="eggless-badge">🌿 Eggless</span>' : ''}
+        <div class="card-features">${c.feats.map(f => `<span class="card-feat">${f}</span>`).join('')}</div>
         <a href="${waLink('Hi Dulcet Cakes! 🎂 I\'d like to order a *' + c.name + '* (' + c.sizes[0].p + '). Please confirm availability.')}" target="_blank" class="btn-wa-card" style="background:${c.grad}">${WA_SVG} Order on WhatsApp</a>
       </div>
     </div>
@@ -1167,36 +1204,124 @@
 
     function buildFlavorMenu() {
       const menu = document.getElementById('flavorMenu');
-      menu.innerHTML = cakes.slice(0, 5).map((c, i) => `
-    <button class="flavor-btn ${i === 0 ? 'active' : ''}" onclick="setHero(${i})">${c.name}</button>
-  `).join('');
+      menu.innerHTML = cakes.map((c, i) => {
+        if (!c.video) return '';
+        return `<button class="flavor-btn ${i === activeHero ? 'active' : ''}" data-cake-idx="${i}" onclick="setHero(${i})">
+          <span style="position:relative;z-index:1;">${c.name}</span>
+          <div class="btn-progress" id="prog-${i}"></div>
+        </button>`;
+      }).join('');
+    }
+
+    function getNextVideoIdx(currentIdx) {
+      let i = currentIdx + 1;
+      while (cakes[i] && !cakes[i].video) i++;
+      if (!cakes[i]) {
+        i = 0;
+        while (cakes[i] && !cakes[i].video) i++;
+      }
+      return i;
+    }
+
+    function preloadNextVideo() {
+      const nextIdx = getNextVideoIdx(activeHero);
+      const nextSrc = cakes[nextIdx].video;
+      const inactiveVid = activeVideoId === 1 ? document.getElementById('heroVideo2') : document.getElementById('heroVideo1');
+      if (inactiveVid && nextSrc && !inactiveVid.src.includes(nextSrc.replace('public/', ''))) {
+        inactiveVid.src = nextSrc;
+        inactiveVid.load();
+      }
     }
 
     function setHero(idx) {
       activeHero = idx; activeSizeIdx = 0;
       const c = cakes[idx];
+      
+      document.querySelectorAll('.flavor-btn').forEach((b) => {
+        const btnIdx = parseInt(b.getAttribute('data-cake-idx'), 10);
+        b.classList.toggle('active', btnIdx === idx);
+      });
+      document.querySelectorAll('.btn-progress').forEach(p => p.style.width = '0%');
 
-      document.querySelectorAll('.flavor-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
-
+      // Fade out text content
       const heroContent = document.getElementById('heroContent');
-      if (heroContent) {
-        heroContent.style.opacity = '0';
-        setTimeout(() => {
-          document.getElementById('heroLabel').textContent = c.sub;
-          document.getElementById('heroTitle').textContent = c.name;
-          document.getElementById('heroDesc').textContent = c.desc;
-          document.getElementById('heroWaBtnText').textContent = 'Order on WhatsApp — ' + c.sizes[0].p;
-          document.getElementById('heroWaBtn').href = waLink('Hi Dulcet Cakes! 🎂 I\'d like to order a *' + c.name + '* (' + c.sizes[0].p + '). Please confirm availability.');
-          updateBuyNow();
-          heroContent.style.opacity = '1';
-        }, 150);
-      } else {
+      if (heroContent) heroContent.style.opacity = '0';
+
+      const v1 = document.getElementById('heroVideo1');
+      const v2 = document.getElementById('heroVideo2');
+
+      const updateTextContent = () => {
         document.getElementById('heroLabel').textContent = c.sub;
         document.getElementById('heroTitle').textContent = c.name;
         document.getElementById('heroDesc').textContent = c.desc;
         document.getElementById('heroWaBtnText').textContent = 'Order on WhatsApp — ' + c.sizes[0].p;
         document.getElementById('heroWaBtn').href = waLink('Hi Dulcet Cakes! 🎂 I\'d like to order a *' + c.name + '* (' + c.sizes[0].p + '). Please confirm availability.');
         updateBuyNow();
+      };
+
+      if (c.video) {
+        const activeVid = activeVideoId === 1 ? v1 : v2;
+        const inactiveVid = activeVideoId === 1 ? v2 : v1;
+
+        // Text fade-out duration (must match CSS transition: 0.5s)
+        const TEXT_FADE_MS = 500;
+        // Video crossfade duration (must match CSS transition: opacity 1s on video elements)
+        const VIDEO_FADE_MS = 1000;
+
+        const triggerPlay = () => {
+          inactiveVid.play().catch(e => console.log('Autoplay prevented'));
+
+          let swapped = false;
+          const doSwap = () => {
+            if (swapped) return;
+            swapped = true;
+            inactiveVid.removeEventListener('timeupdate', onTimeUpdate);
+
+            // Wait for text to fully fade out, then crossfade the video
+            setTimeout(() => {
+              // Step 1: Crossfade the VIDEO (text is fully hidden)
+              inactiveVid.style.opacity = 1;
+              activeVid.style.opacity = 0;
+              activeVideoId = activeVideoId === 1 ? 2 : 1;
+
+              // Step 2: After the video CSS transition completes, update text and fade it back in
+              setTimeout(() => {
+                updateTextContent();
+                if (heroContent) heroContent.style.opacity = '1';
+                setTimeout(preloadNextVideo, 200);
+              }, VIDEO_FADE_MS);
+            }, TEXT_FADE_MS);
+          };
+
+          const onTimeUpdate = () => {
+            if (inactiveVid.currentTime > 0.05) doSwap();
+          };
+
+          inactiveVid.addEventListener('timeupdate', onTimeUpdate);
+          setTimeout(doSwap, 600); // Fallback
+        };
+
+        if (inactiveVid.src.includes(c.video.replace('public/', ''))) {
+          if (inactiveVid.readyState >= 3) {
+            triggerPlay();
+          } else {
+            inactiveVid.oncanplay = () => {
+              triggerPlay();
+              inactiveVid.oncanplay = null;
+            };
+          }
+        } else {
+          inactiveVid.src = c.video;
+          inactiveVid.oncanplay = () => {
+            triggerPlay();
+            inactiveVid.oncanplay = null;
+          };
+          inactiveVid.load();
+        }
+      } else {
+        // If no video, swap text instantly and restore opacity
+        updateTextContent();
+        if (heroContent) heroContent.style.opacity = '1';
       }
     }
 
@@ -1209,4 +1334,48 @@
       const sel = document.getElementById('sizeSel');
       sel.innerHTML = c.sizes.map((s, i) => `<button class="size-btn ${i === activeSizeIdx ? 'active' : ''}" onclick="selectSize(${i})">${s.l}</button>`).join('');
       const params = document.getElementById('buyParams');
-      params.innerHTML = c.params.map(p =>
+      params.innerHTML = c.params.map(p => `<span class="param-tag">✓ ${p}</span>`).join('');
+    }
+
+    // Auto-cycle hero video when it finishes playing & update progress bar
+    document.addEventListener("DOMContentLoaded", () => {
+      const v1 = document.getElementById('heroVideo1');
+      const v2 = document.getElementById('heroVideo2');
+
+      if (v1) v1.play().catch(e => console.log('Autoplay prevented'));
+
+      const handleEnded = () => {
+        setHero(getNextVideoIdx(activeHero));
+      };
+
+      const handleTimeUpdate = (e) => {
+        const v = e.target;
+        if ((activeVideoId === 1 && v === v1) || (activeVideoId === 2 && v === v2)) {
+          const prog = document.getElementById('prog-' + activeHero);
+          if (prog && v.duration) {
+            prog.style.width = (v.currentTime / v.duration) * 100 + '%';
+          }
+        }
+      };
+
+      if (v1) {
+        v1.addEventListener('ended', handleEnded);
+        v1.addEventListener('timeupdate', handleTimeUpdate);
+      }
+      if (v2) {
+        v2.addEventListener('ended', handleEnded);
+        v2.addEventListener('timeupdate', handleTimeUpdate);
+      }
+
+      setTimeout(preloadNextVideo, 1000); // initial preload
+    });
+
+    function selectSize(idx) { activeSizeIdx = idx; updateBuyNow(); }
+
+    buildGrid();
+    buildFlavorMenu();
+  </script>
+</body>
+
+</html>
+<!-- Trigger rebuild -->

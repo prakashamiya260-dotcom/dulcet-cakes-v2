@@ -584,21 +584,25 @@ export default function Home() {
                 <div className="marquee-wrapper">
                     <div className="marquee-content">
                         {/* Original set */}
+                        <div className="marquee-item"><img src="/ordered/20250118_172546.jpg_2K_202607192257.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/20250124_173700.jpg_2K_202607192259.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250129_010753.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/20250217_153644.jpg_202607192219.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250429_174115.jpg_2K_202607192109.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250503_161200.jpg_2K_202607192057.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250821_211010.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
-                        <div className="marquee-item"><img src="/ordered/20250821_211010.jpg_2K_202607192037.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250904_153838.jpg_2K_202607192111.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/IMG_20241011_171501_539.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/IMG_20250704_150406_145.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
                         
                         {/* Duplicated set for seamless infinite scrolling */}
+                        <div className="marquee-item"><img src="/ordered/20250118_172546.jpg_2K_202607192257.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/20250124_173700.jpg_2K_202607192259.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250129_010753.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
+                        <div className="marquee-item"><img src="/ordered/20250217_153644.jpg_202607192219.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250429_174115.jpg_2K_202607192109.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250503_161200.jpg_2K_202607192057.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250821_211010.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
-                        <div className="marquee-item"><img src="/ordered/20250821_211010.jpg_2K_202607192037.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/20250904_153838.jpg_2K_202607192111.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/IMG_20241011_171501_539.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>
                         <div className="marquee-item"><img src="/ordered/IMG_20250704_150406_145.jpg_2K_202607192019.jpeg" alt="Ordered Cake" /></div>

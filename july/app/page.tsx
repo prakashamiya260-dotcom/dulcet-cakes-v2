@@ -474,7 +474,7 @@ export default function Home() {
 
                         <div className="flex flex-col md:flex-row gap-4 justify-center mb-8 md:mb-12">
                             <a
-                                href={waLink(`Hi Dulcet Cakes! 🎂 I'd like to order a *${hero.name}* (${hero.basePrice}). Please confirm availability.`)}
+                                href="https://wa.me/919999789502"
                                 target="_blank" rel="noopener noreferrer"
                                 className="flex items-center justify-center gap-2 px-8 py-4 md:px-10 rounded-full text-lg md:text-xl font-bold text-white transition-transform hover:scale-105 active:scale-95"
                                 style={{ background: "linear-gradient(to right, #f97316, #db2777)", boxShadow: "0 0 40px rgba(249,115,22,0.5)" }}

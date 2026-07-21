@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TKK2NDMM');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dulcet Cakes — Preview</title>
+  <link rel="icon" type="image/png" href="public/logo-circle.png">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: #1a1208;
+      color: #fafafa;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background-color: #f97316;
+      color: #fff;
+    }
+
+    ::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+
+    /* Navbar */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 32px;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(24px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-logo-img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: rgba(249, 115, 22, 0.2);
+      border: 2px solid rgba(249, 115, 22, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.6rem;
+      color: #fb923c;
+      overflow: hidden;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-logo-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .nav-logo-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(to right, #fb923c, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 1.1;
+    }
+
+    .nav-logo-subtitle {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #22c55e;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .btn-wa-nav {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: white;
+      background: linear-gradient(to right, #f97316, #db2777);
+      box-shadow: 0 0 18px rgba(249, 115, 22, 0.5);
+      text-decoration: none;
+      transition: all 0.3s;
+      white-space: nowrap;
+    }
+
+    .btn-wa-nav:hover {
+      box-shadow: 0 0 30px rgba(249, 115, 22, 0.8);
+      transform: scale(1.04);
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 20px 80px;
+      position: relative;
+      overflow: hidden;
+      background: #1a1208;
+      transition: background 1s ease-in-out;
+    }
+
+    .hero video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+      filter: brightness(1.15);
+    }
+
+    @media (max-width: 768px) {
+      .hero video {
+        height: 60%;
+        top: 20%;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%);
+      }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.4) 100%);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 4;
+      max-width: 800px;
+      margin: 0 auto;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    .hero-label {
+      font-size: 0.82rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.4em;
+      color: #fdba74;
+      margin-bottom: 16px;
+      text-shadow: 0 0 20px rgba(253, 186, 116, 0.8), 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h1 {
+      color: #ffffff;
+      font-size: clamp(3rem, 7vw, 8rem);
+      font-weight: 900;
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 30px rgba(0, 0, 0, 0.8), 0 0 60px rgba(0, 0, 0, 0.5), 0 0 4px rgba(255,255,255,0.3);
+    }
+
+    .hero-desc {
+      font-size: 1.1rem;
+      color: #f3f4f6;
+      margin-bottom: 32px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .btn-hero-primary {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(to right, #f97316, #db2777);
+      box-shadow: 0 0 40px rgba(249, 115, 22, 0.5);
+      text-decoration: none;
+      transition: all 0.2s;
+      font-family: 'Outfit', sans-serif;
+      line-height: 1;
+    }
+
+    .btn-hero-primary svg {
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .btn-hero-primary:hover {
+      transform: scale(1.05);
+    }
+
+    .btn-hero-secondary {
+      padding: 16px 28px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .btn-hero-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Stats bar: now inline inside hero-content, not absolutely positioned */
+    .stats-bar {
+      display: inline-flex;
+      gap: 32px;
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(12px);
+      padding: 14px 32px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat-item {
+      text-align: center;
+    }
+
+    .stat-val {
+      font-size: 1.4rem;
+      font-weight: 900;
+    }
+
+    .stat-label {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #9ca3af;
+    }
+
+    /* Ordered Carousel */
+    .ordered-carousel {
+      padding: 60px 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(8px);
+      overflow: hidden;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .ordered-carousel-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+    .marquee-wrapper {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+    }
+    .marquee-content {
+      display: flex;
+      gap: 24px;
+      padding-left: 24px;
+      animation: marquee 15s linear infinite;
+    }
+    .marquee-content:hover {
+      animation-play-state: paused;
+    }
+    .marquee-item {
+      flex-shrink: 0;
+      width: 280px;
+      height: 350px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+      transition: transform 0.3s ease;
+    }
+    .marquee-item:hover {
+      transform: scale(1.02);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    .marquee-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-50% - 12px)); }
+    }
+
+    /* Catalog */
+    .catalog {
+      padding: 96px 24px;
+      background: rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(4px);
+    }
+
+    .catalog-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .catalog-sub {
+      text-align: center;
+      color: #9ca3af;
+      font-size: 1.1rem;
+      margin-bottom: 64px;
+    }
+
+    .grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: all 0.5s;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .card:hover {
+      border-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-accent {
+      height: 6px;
+      width: 100%;
+    }
+
+    /* Support for real photos */
+    .card-media {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .card-img-placeholder {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+      position: relative;
+    }
+
+    .card-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .card-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    .card-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .card-subname {
+      font-size: 0.82rem;
+      color: #9ca3af;
+    }
+
+    .card-price {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #fb923c;
+      white-space: nowrap;
+    }
+
+    .card-desc {
+      font-size: 0.83rem;
+      color: #9ca3af;
+      line-height: 1.6;
+      margin-bottom: 6px;
+    }
+
+    .card-sizes {
+      font-size: 0.72rem;
+      color: #6b7280;
+      margin-bottom: 10px;
+    }
+
+    .card-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .card-feat {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #d1d5db;
+    }
+
+    .eggless-badge {
+      display: inline-flex;
+      align-items: center;
+      font-size: 0.72rem;
+      padding: 4px 12px;
+      border-radius: 50px;
+      background: rgba(34, 197, 94, 0.15);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #4ade80;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .btn-wa-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 12px;
+      border-radius: 16px;
+      font-weight: 700;
+      color: white;
+      text-decoration: none;
+      transition: all 0.2s;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      margin-top: auto;
+      line-height: 1;
+    }
+
+    .btn-wa-card svg {
+      display: block;
+      flex-shrink: 0;
+    }
+
+    .btn-wa-card:hover {
+      transform: scale(1.03);
+    }
+
+    .eggless-global-banner {
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #4ade80;
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    /* Buy Now */
+    .buynow {
+      padding: 96px 24px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .buynow-card {
+      max-width: 800px;
+      width: 100%;
+      background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.1), transparent);
+      padding: 2px;
+      border-radius: 48px;
+    }
+
+    .buynow-inner {
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(40px);
+      padding: 64px 48px;
+      border-radius: 47px;
+      text-align: center;
+    }
+
+    .buynow-label {
+      font-size: 1.8rem;
+      font-weight: 300;
+      margin-bottom: 8px;
+    }
+
+    .buynow-price {
+      font-size: clamp(4rem, 8vw, 6rem);
+      font-weight: 900;
+      background: linear-gradient(to right, #fb923c, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 4px;
+    }
+
+    .buynow-unit {
+      font-size: 1.1rem;
+      opacity: 0.7;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-bottom: 24px;
+    }
+
+    .size-selector {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .size-btn {
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.5);
+      background: none;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      transition: all 0.3s;
+    }
+
+    .size-btn:hover {
+      border-color: rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .size-btn.active {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.4);
+      color: white;
+    }
+
+    .buynow-params {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+
+    .param-tag {
+      padding: 8px 20px;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .btn-wa-big {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 20px 48px;
+      border-radius: 50px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      background: linear-gradient(to right, #22c55e, #059669);
+      box-shadow: 0 0 40px rgba(34, 197, 94, 0.4);
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-bottom: 48px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .btn-wa-big:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 60px rgba(34, 197, 94, 0.6);
+    }
+
+    .buynow-promises {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      text-align: left;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 40px;
+    }
+
+    .promise-label {
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 8px;
+      font-size: 0.85rem;
+    }
+
+    .promise-label.orange {
+      color: #fb923c;
+    }
+
+    .promise-label.pink {
+      color: #ec4899;
+    }
+
+    .promise-text {
+      font-size: 0.88rem;
+      opacity: 0.8;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .footer {
+      background: #111827;
+      padding: 48px 24px 24px;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+      gap: 32px;
+    }
+
+    .footer-brand-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(to right, #fb923c, #ec4899);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .footer-brand-desc {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      line-height: 1.6;
+    }
+
+    .fssai-badge {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 4px 12px;
+      border: 1px solid rgba(249, 115, 22, 0.3);
+      border-radius: 6px;
+      font-size: 0.7rem;
+      color: #fb923c;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .footer h4 {
+      font-weight: 600;
+      color: #fb923c;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer li {
+      margin-bottom: 8px;
+    }
+
+    .footer li a {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer li a:hover {
+      color: white;
+    }
+
+    .footer-contact-item {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .footer-contact-item a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-contact-item a:hover {
+      color: white;
+    }
+
+    @keyframes popHighlight {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 35px rgba(249, 115, 22, 0.7);
+        border-color: #fb923c;
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+    }
+
+    .card.highlighted {
+      animation: popHighlight 1.2s ease-in-out;
+      z-index: 10;
+    }
+
+    .footer-cakes-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .delivery-areas {
+      font-size: 0.72rem;
+      color: #6b7280;
+      line-height: 1.5;
+      margin-top: 12px;
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding-top: 24px;
+      border-top: 1px solid #1f2937;
+      text-align: center;
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    /* Flavor Menu — pushed down enough to not overlap stats bar */
+    .flavor-menu {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 40;
+      display: flex;
+      padding: 6px 8px;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(20px);
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+      max-width: calc(100vw - 32px);
+      overflow-x: auto;
+    }
+
+    .flavor-btn {
+      padding: 7px 12px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.6);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      transition: all 0.3s;
+      white-space: nowrap;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .flavor-btn .btn-progress {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.15);
+      width: 0%;
+      z-index: 0;
+      pointer-events: none;
+      transition: width 0.1s linear;
+    }
+
+    .flavor-btn:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .flavor-btn.active {
+      color: white;
+      background: rgba(255, 255, 255, 0.22);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        padding: 10px 16px;
+      }
+
+      .nav-logo-img {
+        width: 44px;
+        height: 44px;
+        font-size: 1.2rem;
+      }
+
+      .nav-logo-title {
+        font-size: 1.3rem;
+      }
+
+      .nav-logo-subtitle {
+        font-size: 0.6rem;
+      }
+
+      .btn-wa-nav {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+      }
+
+      .hero {
+        padding: 110px 16px 60px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 12vw, 4rem);
+        margin-bottom: 12px;
+      }
+
+      .hero-desc {
+        font-size: 1rem;
+        margin-bottom: 24px;
+        padding: 0 10px;
+      }
+
+      .btn-hero-primary {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 1rem;
+      }
+
+      .btn-hero-secondary {
+        width: 100%;
+      }
+
+      .stats-bar {
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 12px;
+        flex-wrap: nowrap;
+      }
+
+      .stat-val {
+        font-size: 1.1rem;
+      }
+
+      .stat-label {
+        font-size: 0.55rem;
+        letter-spacing: 1px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .buynow {
+        padding: 60px 16px;
+      }
+
+      .buynow-card {
+        border-radius: 32px;
+      }
+
+      .buynow-inner {
+        padding: 32px 20px;
+        border-radius: 31px;
+      }
+
+      .buynow-price {
+        font-size: 3.5rem;
+      }
+
+      .btn-wa-big {
+        width: 100%;
+        justify-content: center;
+        padding: 16px 20px;
+        font-size: 1.2rem;
+      }
+
+      .buynow-promises {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .footer {
+        padding: 40px 16px 20px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .footer-grid h4.mobile-hide {
+        display: none;
+      }
+
+      .flavor-menu {
+        width: 100%;
+        padding: 6px;
+        bottom: 12px;
+        justify-content: flex-start;
+        border-radius: 12px;
+      }
+
+      .flavor-btn {
+        font-size: 0.85rem;
+        padding: 8px 14px;
+        flex-shrink: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKK2NDMM"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- Navbar -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <div class="nav-logo-img" id="logoWrap">
+        <!-- If logo.png exists in public/, it shows. Otherwise shows "D" -->
+        <img src="public/logo.png" alt="Logo" style="width:100%;height:100%;object-fit:cover;border-radius:50%;"
+          onerror="this.style.display='none';document.getElementById('logoFallback').style.display='block'">
+        <span id="logoFallback" style="display:none;">D</span>
+      </div>
+      <div class="nav-logo-text">
+        <div class="nav-logo-title">Dulcet Cakes</div>
+        <div class="nav-logo-subtitle">100% Eggless 🌿</div>
+      </div>
+    </div>
+    <a href="https://wa.me/919999789502?text=Hi%20Dulcet%20Cakes!%20I%20would%20like%20to%20place%20an%20order."
+      target="_blank" class="btn-wa-nav">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16">
+        <path
+          d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+        <path
+          d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.116 1.533 5.845L.057 23.428a.5.5 0 0 0 .515.57l5.775-1.513A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.373l-.36-.213-3.429.899.915-3.34-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.574 6.574 2.182 12 2.182c5.426 0 9.818 4.392 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z" />
+      </svg>
+      Order Now
+    </a>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <video id="heroVideo1" muted playsinline preload="auto" src="public/videos/hero.mp4"
+      style="background: #1a1208; position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; z-index: 1; transition: opacity 1s ease-in-out; opacity: 1;"></video>
+    <video id="heroVideo2" muted playsinline preload="auto"
+      style="background: transparent; position: absolute; top:0; left:0; width:100%; height:100%; object-fit: cover; z-index: 2; transition: opacity 1s ease-in-out; opacity: 0;"></video>
+    <div class="hero-overlay" style="z-index: 3; pointer-events: none;"></div>
+    <div class="hero-content" id="heroContent">
+      <p class="hero-label" id="heroLabel">Decadence redefined.</p>
+      <h1 id="heroTitle">Classic Chocolate</h1>
+      <p class="hero-desc" id="heroDesc">Our signature dark chocolate couverture cake — rich, velvety, unforgettable.
+      </p>
+      <div class="hero-btns">
+        <a href="https://wa.me/919999789502" target="_blank" id="heroWaBtn" class="btn-hero-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.116 1.533 5.845L.057 23.428a.5.5 0 0 0 .515.57l5.775-1.513A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.373l-.36-.213-3.429.899.915-3.34-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.574 6.574 2.182 12 2.182c5.426 0 9.818 4.392 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z" />
+          </svg>
+          <span id="heroWaBtnText">Order on WhatsApp — ₹599</span>
+        </a>
+        <a href="#catalog" class="btn-hero-secondary">Explore More ↓</a>
+      </div>
+      <!-- Stats inline below buttons -->
+      <div class="stats-bar" style="margin-top:0;">
+        <div class="stat-item">
+          <div class="stat-val">8+</div>
+          <div class="stat-label">Flavours</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">500+</div>
+          <div class="stat-label">Happy Orders</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-val">Same Day</div>
+          <div class="stat-label">Delivery</div>
+        </div>
+      </div>
+    </div>
+    <!-- Stats bar: moved inside hero-content so it flows naturally below the buttons -->
+  </section>
+
+  <!-- Catalog -->
+  <section class="catalog" id="catalog">
+    <div class="eggless-global-banner">
+      🌿 100% Pure Eggless Bakery
+    </div>
+    <h2 class="catalog-title">Our Cakes</h2>
+    <p class="catalog-sub">Handcrafted for every occasion</p>
+    <div class="grid" id="cakeGrid"></div>
+  </section>
+
+  <!-- Ordered Cakes Carousel -->
+  <section class="ordered-carousel">
+    <h2 class="ordered-carousel-title">Ordered Cakes</h2>
+    <div class="marquee-wrapper">
+      <div class="marquee-content">
+        <!-- Original set -->
+        <div class="marquee-item"><img src="public/ordered/20250118_172546.jpg_2K_202607192257.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250124_173700.jpg_2K_202607192259.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250129_010753.jpg_2K_202607192019.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250217_153644.jpg_202607192219.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250429_174115.jpg_2K_202607192109.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250503_161200.jpg_2K_202607192057.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250821_211010.jpg_2K_202607192019.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250904_153838.jpg_2K_202607192111.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/IMG_20241011_171501_539.jpg_2K_202607192019.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/IMG_20250704_150406_145.jpg_2K_202607192019.jpeg" alt="Ordered Cake"></div>
+        
+        <!-- Duplicated set for seamless infinite scrolling -->
+        <div class="marquee-item"><img src="public/ordered/20250118_172546.jpg_2K_202607192257.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250124_173700.jpg_2K_202607192259.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250129_010753.jpg_2K_202607192019.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250217_153644.jpg_202607192219.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250429_174115.jpg_2K_202607192109.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250503_161200.jpg_2K_202607192057.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250821_211010.jpg_2K_202607192019.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/20250904_153838.jpg_2K_202607192111.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/IMG_20241011_171501_539.jpg_2K_202607192019.jpeg" alt="Ordered Cake"></div>
+        <div class="marquee-item"><img src="public/ordered/IMG_20250704_150406_145.jpg_2K_202607192019.jpeg" alt="Ordered Cake"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buy Now -->
+  <section class="buynow" id="buynow">
+    <div class="buynow-card">
+      <div class="buynow-inner">
+        <div class="buynow-label">Ready to indulge?</div>
+        <div class="buynow-price" id="buyPrice">₹599</div>
+        <div class="buynow-unit" id="buyUnit">500g cake</div>
+        <div class="size-selector" id="sizeSel"></div>
+        <div class="buynow-params" id="buyParams"></div>
+        <a href="#" id="buyWaBtn" class="btn-wa-big">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+            <path
+              d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.116 1.533 5.845L.057 23.428a.5.5 0 0 0 .515.57l5.775-1.513A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 0 1-5.006-1.373l-.36-.213-3.429.899.915-3.34-.234-.374A9.818 9.818 0 0 1 2.182 12C2.182 6.574 6.574 2.182 12 2.182c5.426 0 9.818 4.392 9.818 9.818 0 5.426-4.392 9.818-9.818 9.818z" />
+          </svg>
+          Order via WhatsApp
+        </a>
+        <div class="buynow-promises">
+          <div>
+            <div class="promise-label orange">Delivery Promise</div>
+            <div class="promise-text">Same-day & next-day delivery in Patna. Keeps perfectly fresh for 3 days.</div>
+          </div>
+          <div>
+            <div class="promise-label pink">Satisfaction Guarantee</div>
+            <div class="promise-text">100% Satisfaction Guarantee. Taste the love, or we make it right.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">Dulcet Cakes</div>
+        <p class="footer-brand-desc">Crafting premium, handcrafted cakes for your most special occasions. Patna's
+          artisanal cake studio.</p>
+        <div class="fssai-badge">FSSAI Lic. 20426001000633</div>
+      </div>
+      <div>
+        <h4>Our Cakes</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="highlightCake('vanilla-dream')">Vanilla Dream</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('strawberry-bliss')">Strawberry Bliss</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('classic-chocolate')">Classic Chocolate</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('red-velvet')">Red Velvet</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('belgian-dark')">Belgian Dark Chocolate</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('salted-caramel-cake')">Salted Caramel Cake</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('golden-rocher')">Golden Rocher Cake</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('biscoff-heaven')">Biscoff Heaven</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="mobile-hide" style="opacity: 0; pointer-events: none;">&nbsp;</h4>
+        <ul>
+          <li><a href="javascript:void(0)" onclick="highlightCake('saffron-rasmalai')">Saffron Rasmalai Cake</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('midnight-mousse')">Midnight Mousse</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('kitkat-krunch-blast')">KitKat Krunch Blast</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('oreo-obsession')">Oreo Obsession</a></li>
+          <li><a href="javascript:void(0)" onclick="highlightCake('nutella-nirvana')">Nutella Nirvana</a></li>
+          <li><a href="#catalog">Eggless Cakes</a></li>
+          <li><a href="#catalog">Custom Designer Cakes</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Delivery Areas</h4>
+        <p class="delivery-areas">Boring Road, Kankarbagh, Patliputra, Bailey Road, Ashiana, Digha, Danapur, Fraser Road
+          & all Patna areas</p>
+      </div>
+      <div>
+        <h4>Get in Touch</h4>
+        <div class="footer-contact-item">📞 <a href="tel:+919999789502">+91 99997 89502</a></div>
+        <div class="footer-contact-item">💬 WhatsApp: <a href="https://wa.me/919999789502" target="_blank">+91 99997 89502</a></div>
+        <div class="footer-contact-item">📧 <a href="mailto:dulcetcakes100@gmail.com">dulcetcakes100@gmail.com</a></div>
+        <div class="footer-contact-item">📍 <a href="https://maps.google.com/?q=Dulcet+Cakes,+A/139,+housing+board+colony,+kankarbagh,+patna,+800020" target="_blank" rel="noopener noreferrer">Kankarbagh, Patna</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Dulcet Cakes. All rights reserved. Handcrafted with ❤️ in Patna.</div>
+  </footer>
+
+  <!-- Bottom Flavor Menu -->
+  <div class="flavor-menu" id="flavorMenu"></div>
+
+  <script>
+    const WA = "919999789502";
+    function waLink(msg) { return "https://wa.me/" + WA + "?text=" + encodeURIComponent(msg); }
+    const WA_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.116 1.533 5.845L.057 23.428a.5.5 0 0 0 .515.57l5.775-1.513A11.94 11.94 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>';
+
+    const cakes = [
+      // To use a real photo, set photo: "public/c1.jpg". Set photo: null to use the gradient+emoji fallback.
+      { id: "classic-chocolate", name: "Classic Chocolate", sub: "Decadence redefined.", emoji: "🍫", photo: "public/Classic Chocolate.jpeg", video: "public/videos/hero.mp4", badge: { t: "Bestseller", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#4E342E,#212121)", desc: "Our signature dark chocolate couverture cake — rich, velvety, unforgettable.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Rich Dark Cocoa", "Moist Sponge", "Premium Ganache"], params: ["Freshly Baked", "100% Eggless", "Premium Cocoa"], egg: true },
+      { id: "strawberry-bliss", name: "Strawberry Bliss", sub: "Berry beautiful.", emoji: "🍓", photo: "public/Strawberry Bliss.jpeg", video: "public/videos/strawberry_vid.mp4", badge: { t: "New", bg: "#ec4899", c: "#fff" }, grad: "linear-gradient(135deg,#E53935,#B71C1C)", desc: "Real strawberry compote, cream cheese frosting, light vanilla sponge.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Fresh Berries", "Light Sponge", "Cream Cheese"], params: ["Real Fruits", "Light Cream", "100% Eggless"], egg: true },
+      { id: "vanilla-dream", name: "Vanilla Dream", sub: "Classic elegance.", emoji: "🍦", photo: "public/Vanilla Dream.jpeg", video: null, badge: null, grad: "linear-gradient(135deg,#F57F17,#E65100)", desc: "Madagascar vanilla bean sponge with silky buttercream frosting.", sizes: [{ l: "500g · ₹549", p: "₹549", u: "500g" }, { l: "1kg · ₹949", p: "₹949", u: "1kg" }, { l: "1.5kg · ₹1,349", p: "₹1,349", u: "1.5kg" }], feats: ["Madagascar Vanilla", "Buttercream", "Soft Crumb"], params: ["Real Vanilla", "Hand Whipped", "100% Eggless"], egg: true },
+      { id: "red-velvet", name: "Red Velvet", sub: "Velvety perfection.", emoji: "❤️", photo: "public/Red Velvet.jpeg", video: "public/videos/red_velvet.mp4", badge: { t: "Popular", bg: "#f97316", c: "#000" }, grad: "linear-gradient(135deg,#C62828,#4A0000)", desc: "Velvety cocoa layers with tangy cream cheese frosting. A celebration showstopper.", sizes: [{ l: "500g · ₹749", p: "₹749", u: "500g" }, { l: "1kg · ₹1,199", p: "₹1,199", u: "1kg" }, { l: "1.5kg · ₹1,599", p: "₹1,599", u: "1.5kg" }], feats: ["Cream Cheese Frosting", "Velvety Texture", "Premium Cocoa"], params: ["Cream Cheese", "Velvety Texture", "100% Eggless"], egg: true },
+      { id: "blueberry-delight", name: "Blueberry Delight", sub: "Berry luscious.", emoji: "🫐", photo: "public/Blueberry Delight.png", video: "public/videos/blueberry_vid.mp4", badge: { t: "New", bg: "#8b5cf6", c: "#fff" }, grad: "linear-gradient(135deg,#4A148C,#311B92)", desc: "Vanilla sponge layered with wild blueberry compote and tangy cream cheese frosting.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }], feats: ["Wild Blueberries", "Vanilla Sponge", "Cream Cheese"], params: ["Wild Blueberries", "Cream Cheese", "100% Eggless"], egg: true },
+      { id: "belgian-dark", name: "Belgian Dark", sub: "Our signature masterpiece.", emoji: "🏆", photo: "public/Belgian Dark (Premium).jpeg", video: null, badge: { t: "Premium", bg: "#fff", c: "#000" }, grad: "linear-gradient(135deg,#1A1208,#000)", desc: "72% Belgian couverture, dark ganache drip, hand-tempered chocolate shards.", sizes: [{ l: "500g · ₹899", p: "₹899", u: "500g" }, { l: "1kg · ₹1,599", p: "₹1,599", u: "1kg" }, { l: "1.5kg · ₹2,199", p: "₹2,199", u: "1.5kg" }], feats: ["72% Belgian Cocoa", "Dark Ganache Drip", "Hand-Tempered Shards"], params: ["72% Belgian Cocoa", "Cold Crafted", "Premium Finish"], egg: true },
+      { id: "butterscotch", name: "Butterscotch Crunch", sub: "Caramel sponge, crunchy praline.", emoji: "🍯", photo: "public/Butterscotch Crunch.jpeg", video: null, badge: null, grad: "linear-gradient(135deg,#FF8F00,#E65100)", desc: "Caramel-infused sponge with golden butterscotch sauce and crunchy praline bits.", sizes: [{ l: "500g · ₹549", p: "₹549", u: "500g" }, { l: "1kg · ₹949", p: "₹949", u: "1kg" }, { l: "1.5kg · ₹1,349", p: "₹1,349", u: "1.5kg" }], feats: ["Butterscotch Sauce", "Praline Crunch", "Soft Sponge"], params: ["Butterscotch Sauce", "Praline Bits", "100% Eggless"], egg: true },
+      { id: "fresh-fruit", name: "Fresh Fruit Delight", sub: "Seasonal fruits, whipped cream.", emoji: "🍊", photo: "public/fresh_fruit_delight.jpeg", video: null, badge: { t: "Eggless", bg: "#22c55e", c: "#fff" }, grad: "linear-gradient(135deg,#2E7D32,#1B5E20)", desc: "Light vanilla sponge loaded with seasonal fresh fruits and whipped cream.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Seasonal Fruits", "Whipped Cream", "100% Eggless"], params: ["100% Eggless", "Fresh Fruits", "Light Cream"], egg: true },
+      { id: "black-forest", name: "Black Forest", sub: "Cherry compote, chocolate shavings.", emoji: "🍒", photo: "public/Black Forest.jpeg", video: null, badge: null, grad: "linear-gradient(135deg,#3E2723,#1A1208)", desc: "Classic Black Forest with cherry compote, whipped cream, and dark chocolate shavings.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Cherry Compote", "Choco Shavings", "Whipped Cream"], params: ["Cherry Compote", "Dark Chocolate", "100% Eggless"], egg: true },
+      { id: "salted-caramel-cake", name: "Salted Caramel Cake", sub: "Caramelized sweet-salty harmony.", emoji: "🍮", photo: "public/Salted Caramel Cake.png", video: null, badge: { t: "New", bg: "#f57c00", c: "#fff" }, grad: "linear-gradient(135deg,#FFB74D,#F57C00)", desc: "Rich caramel-infused sponge layers with smooth salted caramel sauce, buttercream, and a touch of Maldon sea salt.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Salted Caramel", "Buttercream", "Sweet & Salty"], params: ["Salted Caramel", "100% Eggless", "Premium Finish"], egg: true },
+      { id: "golden-rocher", name: "Golden Rocher Cake", sub: "Hazelnut chocolate luxury.", emoji: "🌰", photo: "public/Golden Rocher Cake.jpg", video: null, badge: { t: "Premium", bg: "#CFB53B", c: "#000" }, grad: "linear-gradient(135deg,#CFB53B,#8C7853)", desc: "Rich hazelnut chocolate sponge, filled with Nutella glaze and crunchy wafers, crowned with golden Rocher chocolates.", sizes: [{ l: "500g · ₹749", p: "₹749", u: "500g" }, { l: "1kg · ₹1,299", p: "₹1,299", u: "1kg" }, { l: "1.5kg · ₹1,799", p: "₹1,799", u: "1.5kg" }], feats: ["Hazelnut Rocher", "Nutella Glaze", "Crunchy Wafers"], params: ["Premium Cocoa", "100% Eggless", "Gold Sprinkles"], egg: true },
+      { id: "biscoff-heaven", name: "Biscoff Heaven", sub: "Caramelized cookie magic.", emoji: "🍪", photo: "public/Biscoff Heaven.jpg", video: null, badge: { t: "Trending", bg: "#d97706", c: "#fff" }, grad: "linear-gradient(135deg,#D7CCC8,#8D6E63)", desc: "Spiced speculoos cookie sponge layered with smooth Lotus Biscoff spread and whipped cookie-butter cream, finished with crunchy Biscoff crumbles.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Lotus Biscoff", "Cookie Butter", "Crunchy Speculoos"], params: ["Real Biscoff", "100% Eggless", "Cookie Crumbles"], egg: true },
+      { id: "saffron-rasmalai", name: "Saffron Rasmalai Cake", sub: "Traditional luxury in a sponge.", emoji: "🥛", photo: "public/Saffron Rasmalai Cake.avif", video: null, badge: { t: "Festive Special", bg: "#f59e0b", c: "#000" }, grad: "linear-gradient(135deg,#F59E0B,#D97706)", desc: "Saffron and cardamom-infused sponge soaked in rich pistachio rabdi, topped with fresh cream, sliced almonds, pistachios, and dried rose petals.", sizes: [{ l: "500g · ₹699", p: "₹699", u: "500g" }, { l: "1kg · ₹1,199", p: "₹1,199", u: "1kg" }, { l: "1.5kg · ₹1,599", p: "₹1,599", u: "1.5kg" }], feats: ["Saffron & Cardamom", "Pistachio Rabdi Soaked", "Rose Petals & Nuts"], params: ["Premium Rabdi", "100% Eggless", "Rich Saffron"], egg: true },
+      { id: "midnight-mousse", name: "Midnight Mousse", sub: "Rich chocolate velvet.", emoji: "🍫", photo: "public/Midnight Mousse.jpeg", video: null, badge: { t: "Chef's Special", bg: "#7c3aed", c: "#fff" }, grad: "linear-gradient(135deg,#2D1B4E,#1F1235)", desc: "Decadent layers of dark chocolate sponge and airy chocolate mousse, coated in a glossy chocolate glaze.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Dark Chocolate Mousse", "Glazed Finish", "Fluffy Sponge"], params: ["Cold Crafted", "100% Eggless", "Belgian Cocoa"], egg: true },
+      { id: "kitkat-krunch-blast", name: "KitKat Krunch Blast", sub: "Chocolate-wafer explosion.", emoji: "🍫", photo: "public/kitkat krunch blast.webp", video: null, badge: { t: "Crispy Delight", bg: "#dc2626", c: "#fff" }, grad: "linear-gradient(135deg,#d32f2f,#7b1fa2)", desc: "Crunchy wafer-infused chocolate sponge layered with creamy milk chocolate frosting, loaded with crushed KitKat bars and chocolate drizzle.", sizes: [{ l: "500g · ₹649", p: "₹649", u: "500g" }, { l: "1kg · ₹1,099", p: "₹1,099", u: "1kg" }, { l: "1.5kg · ₹1,499", p: "₹1,499", u: "1.5kg" }], feats: ["Crushed KitKat", "Chocolate Wafers", "Milk Chocolate Drizzle"], params: ["Cracked KitKat", "100% Eggless", "Premium Frosting"], egg: true },
+      { id: "oreo-obsession", name: "Oreo Obsession", sub: "Cookies & cream dream.", emoji: "🍪", photo: "public/Oreo Obsession.jpeg", video: null, badge: { t: "Kids' Favorite", bg: "#1e3a8a", c: "#fff" }, grad: "linear-gradient(135deg,#1E3A8A,#0D1B2A)", desc: "Rich dark chocolate sponge layered with crushed Oreo cookies and creamy vanilla cookies-and-cream buttercream, topped with whole Oreos.", sizes: [{ l: "500g · ₹599", p: "₹599", u: "500g" }, { l: "1kg · ₹999", p: "₹999", u: "1kg" }, { l: "1.5kg · ₹1,399", p: "₹1,399", u: "1.5kg" }], feats: ["Oreo Buttercream", "Crushed Cookies", "Dark Cocoa Sponge"], params: ["Real Oreo Cookies", "100% Eggless", "Cookies & Cream"], egg: true },
+      { id: "nutella-nirvana", name: "Nutella Nirvana", sub: "Hazelnut spread bliss.", emoji: "🌰", photo: "public/Nutella Nirvana.jpg", video: null, badge: { t: "Hazelnut Classic", bg: "#ea580c", c: "#fff" }, grad: "linear-gradient(135deg,#8D6E63,#4E342E)", desc: "Moist chocolate sponge filled with rich layers of authentic Nutella spread and hazelnut buttercream, topped with a luscious chocolate drip.", sizes: [{ l: "500g · ₹749", p: "₹749", u: "500g" }, { l: "1kg · ₹1,299", p: "₹1,299", u: "1kg" }, { l: "1.5kg · ₹1,799", p: "₹1,799", u: "1.5kg" }], feats: ["Authentic Nutella", "Hazelnut Buttercream", "Chocolate Drip"], params: ["Real Nutella", "100% Eggless", "Hazelnut Crunch"], egg: true },
+    ];
+
+    let activeHero = 0;
+    let activeSizeIdx = 0;
+    let activeVideoId = 1;
+
+    function highlightCake(cakeId) {
+      const card = document.getElementById('cake-' + cakeId);
+      if (card) {
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setTimeout(() => {
+          card.classList.add('highlighted');
+          card.addEventListener('animationend', () => {
+            card.classList.remove('highlighted');
+          }, { once: true });
+        }, 300);
+      } else {
+        const cat = document.getElementById('catalog');
+        if (cat) cat.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function buildGrid() {
+      const grid = document.getElementById('cakeGrid');
+      grid.innerHTML = cakes.map((c, i) => `
+    <div class="card" id="cake-${c.id}">
+      <div class="card-accent" style="background:${c.grad}"></div>
+      <div class="card-media">
+        ${c.badge ? `<span class="card-badge" style="background:${c.badge.bg};color:${c.badge.c};z-index:10;">${c.badge.t}</span>` : ''}
+        ${c.photo
+          ? `<img src="${c.photo}" class="card-photo" style="display:block;" alt="${c.name}">`
+          : `<div class="card-img-placeholder" style="background:${c.grad}">${c.emoji}</div>`
+        }
+      </div>
+      <div class="card-body">
+        <div class="card-top">
+          <div><div class="card-name">${c.name}</div><div class="card-subname">${c.sub}</div></div>
+          <div class="card-price">${c.sizes[0].p}</div>
+        </div>
+        <p class="card-desc">${c.desc}</p>
+        <p class="card-sizes">${c.sizes.map(s => s.l).join(' &nbsp;|&nbsp; ')}</p>
+        ${c.egg ? '<span class="eggless-badge">🌿 Eggless</span>' : ''}
+        <div class="card-features">${c.feats.map(f => `<span class="card-feat">${f}</span>`).join('')}</div>
+        <a href="${waLink('Hi Dulcet Cakes! 🎂 I\'d like to order a *' + c.name + '* (' + c.sizes[0].p + '). Please confirm availability.')}" target="_blank" class="btn-wa-card" style="background:${c.grad}">${WA_SVG} Order on WhatsApp</a>
+      </div>
+    </div>
+  `).join('');
+    }
+
+    function buildFlavorMenu() {
+      const menu = document.getElementById('flavorMenu');
+      menu.innerHTML = cakes.map((c, i) => {
+        if (!c.video) return '';
+        return `<button class="flavor-btn ${i === activeHero ? 'active' : ''}" data-cake-idx="${i}" onclick="setHero(${i})">
+          <span style="position:relative;z-index:1;">${c.name}</span>
+          <div class="btn-progress" id="prog-${i}"></div>
+        </button>`;
+      }).join('');
+    }
+
+    function getNextVideoIdx(currentIdx) {
+      let i = currentIdx + 1;
+      while (cakes[i] && !cakes[i].video) i++;
+      if (!cakes[i]) {
+        i = 0;
+        while (cakes[i] && !cakes[i].video) i++;
+      }
+      return i;
+    }
+
+    function preloadNextVideo() {
+      const nextIdx = getNextVideoIdx(activeHero);
+      const nextSrc = cakes[nextIdx].video;
+      const inactiveVid = activeVideoId === 1 ? document.getElementById('heroVideo2') : document.getElementById('heroVideo1');
+      if (inactiveVid && nextSrc && !inactiveVid.src.includes(nextSrc.replace('public/', ''))) {
+        inactiveVid.src = nextSrc;
+        inactiveVid.load();
+      }
+    }
+
+    function setHero(idx) {
+      activeHero = idx; activeSizeIdx = 0;
+      const c = cakes[idx];
+      
+      document.querySelectorAll('.flavor-btn').forEach((b) => {
+        const btnIdx = parseInt(b.getAttribute('data-cake-idx'), 10);
+        b.classList.toggle('active', btnIdx === idx);
+      });
+      document.querySelectorAll('.btn-progress').forEach(p => p.style.width = '0%');
+
+      // Fade out text content
+      const heroContent = document.getElementById('heroContent');
+      if (heroContent) heroContent.style.opacity = '0';
+
+      const v1 = document.getElementById('heroVideo1');
+      const v2 = document.getElementById('heroVideo2');
+
+      const updateTextContent = () => {
+        document.getElementById('heroLabel').textContent = c.sub;
+        document.getElementById('heroTitle').textContent = c.name;
+        document.getElementById('heroDesc').textContent = c.desc;
+        document.getElementById('heroWaBtnText').textContent = 'Order on WhatsApp — ' + c.sizes[0].p;
+        document.getElementById('heroWaBtn').href = 'https://wa.me/919999789502';
+        updateBuyNow();
+      };
+
+      if (c.video) {
+        const activeVid = activeVideoId === 1 ? v1 : v2;
+        const inactiveVid = activeVideoId === 1 ? v2 : v1;
+
+        // Text fade-out duration (must match CSS transition: 0.5s)
+        const TEXT_FADE_MS = 500;
+        // Video crossfade duration (must match CSS transition: opacity 1s on video elements)
+        const VIDEO_FADE_MS = 1000;
+
+        const triggerPlay = () => {
+          inactiveVid.play().catch(e => console.log('Autoplay prevented'));
+
+          let swapped = false;
+          const doSwap = () => {
+            if (swapped) return;
+            swapped = true;
+            inactiveVid.removeEventListener('timeupdate', onTimeUpdate);
+
+            // Wait for text to fully fade out, then crossfade the video
+            setTimeout(() => {
+              // Step 1: Crossfade the VIDEO (text is fully hidden)
+              inactiveVid.style.opacity = 1;
+              activeVid.style.opacity = 0;
+              activeVideoId = activeVideoId === 1 ? 2 : 1;
+
+              // Step 2: After the video CSS transition completes, update text and fade it back in
+              setTimeout(() => {
+                updateTextContent();
+                if (heroContent) heroContent.style.opacity = '1';
+                setTimeout(preloadNextVideo, 200);
+              }, VIDEO_FADE_MS);
+            }, TEXT_FADE_MS);
+          };
+
+          const onTimeUpdate = () => {
+            if (inactiveVid.currentTime > 0.05) doSwap();
+          };
+
+          inactiveVid.addEventListener('timeupdate', onTimeUpdate);
+          setTimeout(doSwap, 600); // Fallback
+        };
+
+        if (inactiveVid.src.includes(c.video.replace('public/', ''))) {
+          if (inactiveVid.readyState >= 3) {
+            triggerPlay();
+          } else {
+            inactiveVid.oncanplay = () => {
+              triggerPlay();
+              inactiveVid.oncanplay = null;
+            };
+          }
+        } else {
+          inactiveVid.src = c.video;
+          inactiveVid.oncanplay = () => {
+            triggerPlay();
+            inactiveVid.oncanplay = null;
+          };
+          inactiveVid.load();
+        }
+      } else {
+        // If no video, swap text instantly and restore opacity
+        updateTextContent();
+        if (heroContent) heroContent.style.opacity = '1';
+      }
+    }
+
+    function updateBuyNow() {
+      const c = cakes[activeHero];
+      const sz = c.sizes[activeSizeIdx];
+      document.getElementById('buyPrice').textContent = sz.p;
+      document.getElementById('buyUnit').textContent = sz.u + ' cake';
+      document.getElementById('buyWaBtn').href = waLink('Hi Dulcet Cakes! 🎂 I\'d like to order a *' + c.name + '* — ' + sz.u + ' (' + sz.p + '). Please confirm availability and delivery!');
+      const sel = document.getElementById('sizeSel');
+      sel.innerHTML = c.sizes.map((s, i) => `<button class="size-btn ${i === activeSizeIdx ? 'active' : ''}" onclick="selectSize(${i})">${s.l}</button>`).join('');
+      const params = document.getElementById('buyParams');
+      params.innerHTML = c.params.map(p => `<span class="param-tag">✓ ${p}</span>`).join('');
+    }
+
+    // Auto-cycle hero video when it finishes playing & update progress bar
+    document.addEventListener("DOMContentLoaded", () => {
+      const v1 = document.getElementById('heroVideo1');
+      const v2 = document.getElementById('heroVideo2');
+
+      if (v1) v1.play().catch(e => console.log('Autoplay prevented'));
+
+      const handleEnded = () => {
+        setHero(getNextVideoIdx(activeHero));
+      };
+
+      const handleTimeUpdate = (e) => {
+        const v = e.target;
+        if ((activeVideoId === 1 && v === v1) || (activeVideoId === 2 && v === v2)) {
+          const prog = document.getElementById('prog-' + activeHero);
+          if (prog && v.duration) {
+            prog.style.width = (v.currentTime / v.duration) * 100 + '%';
+          }
+        }
+      };
+
+      if (v1) {
+        v1.addEventListener('ended', handleEnded);
+        v1.addEventListener('timeupdate', handleTimeUpdate);
+      }
+      if (v2) {
+        v2.addEventListener('ended', handleEnded);
+        v2.addEventListener('timeupdate', handleTimeUpdate);
+      }
+
+      setTimeout(preloadNextVideo, 1000); // initial preload
+    });
+
+    function selectSize(idx) { activeSizeIdx = idx; updateBuyNow(); }
+
+    buildGrid();
+    buildFlavorMenu();
+  </script>
+</body>
+
+</html>
+<!-- Trigger rebuild -->

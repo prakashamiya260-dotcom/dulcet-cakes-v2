@@ -463,7 +463,7 @@ export default function Home() {
                     }}
                 />
                 {/* Gradient overlay */}
-                <div className="absolute inset-0 z-10" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.7) 100%)" }} />
+                <div className="absolute inset-0 z-10 pointer-events-none" style={{ background: "linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.7) 100%)" }} />
 
                 {/* Content */}
                 <div className="relative z-20 flex flex-col items-center px-4 md:px-6 max-w-4xl mx-auto w-full">

@@ -321,7 +321,7 @@ const cakes: Cake[] = [
         name: "Pineapple Paradise",
         subName: "Tropical pineapple freshness.",
         emoji: "🍍",
-        photo: "/pineapple_paradise.png",
+        photo: "/pineapple_paradise.jpg",
         video: null,
         badge: { text: "Tropical", bg: "#16a34a", color: "#fff" },
         gradient: "linear-gradient(135deg, #F9A825, #F57F17)",

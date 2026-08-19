@@ -304,7 +304,7 @@ const cakes: Cake[] = [
         name: "Black Forest",
         subName: "Cherry compote, chocolate shavings.",
         emoji: "🍒",
-        photo: "/Black Forest.jpeg",
+        photo: "/black_forest_cake.jpg",
         video: null,
         badge: { text: "Exotic", bg: "#9333ea", color: "#fff" },
         gradient: "linear-gradient(135deg, #3E2723, #1A1208)",

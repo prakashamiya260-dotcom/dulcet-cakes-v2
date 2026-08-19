@@ -130,6 +130,23 @@ const cakes: Cake[] = [
         params: ["Butterscotch Sauce", "Praline Bits", "100% Eggless"],
     },
     {
+        id: "pineapple-paradise",
+        name: "Pineapple Paradise",
+        subName: "Tropical pineapple freshness.",
+        emoji: "🍍",
+        photo: "/pineapple_paradise.jpg",
+        video: null,
+        badge: { text: "Tropical", bg: "#16a34a", color: "#fff" },
+        gradient: "linear-gradient(135deg, #F9A825, #F57F17)",
+        desc: "Light vanilla sponge soaked in pineapple syrup, layered with fresh pineapple chunks and whipped cream, topped with caramelized pineapple slices.",
+        sizes: "500g · ₹549 | 1kg · ₹949 | 1.5kg · ₹1,349",
+        basePrice: "₹549",
+        features: ["Fresh Pineapple", "Whipped Cream", "Pineapple Syrup"],
+        eggless: true,
+        sizePrices: [{ label: "500g · ₹549", price: "₹549", unit: "500g cake" }, { label: "1kg · ₹949", price: "₹949", unit: "1kg cake" }, { label: "1.5kg · ₹1,349", price: "₹1,349", unit: "1.5kg cake" }],
+        params: ["Fresh Pineapple", "100% Eggless", "Tropical Cream"],
+    },
+    {
         id: "blueberry-delight",
         name: "Blueberry Delight",
         subName: "Berry luscious.",
@@ -331,8 +348,6 @@ const cakes: Cake[] = [
         features: ["Fresh Pineapple", "Whipped Cream", "Pineapple Syrup"],
         eggless: true,
         sizePrices: [{ label: "500g · ₹549", price: "₹549", unit: "500g cake" }, { label: "1kg · ₹949", price: "₹949", unit: "1kg cake" }, { label: "1.5kg · ₹1,349", price: "₹1,349", unit: "1.5kg cake" }],
-        params: ["Fresh Pineapple", "100% Eggless", "Tropical Cream"],
-    },
 ];
 
 const heroStats = [

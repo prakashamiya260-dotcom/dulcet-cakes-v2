@@ -673,7 +673,7 @@ export default function Home() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left border-t pt-10" style={{ borderColor: "rgba(255,255,255,0.1)" }}>
                             <div>
                                 <h4 className="font-bold uppercase tracking-wide text-sm mb-2 text-orange-400">Delivery Promise</h4>
-                                <p className="opacity-80 text-sm leading-relaxed">Same-day & next-day delivery available in Patna. Keeps perfectly fresh for 3 days.</p>
+                                <p className="opacity-80 text-sm leading-relaxed">Freshly baked on demand. We deliver your custom cakes within 24 to 48 hours in Patna. Keeps fresh for 3 days.</p>
                             </div>
                             <div>
                                 <h4 className="font-bold uppercase tracking-wide text-sm mb-2 text-pink-400">Satisfaction Guarantee</h4>

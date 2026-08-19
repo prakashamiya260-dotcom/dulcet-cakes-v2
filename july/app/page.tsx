@@ -34,7 +34,7 @@ const cakes: Cake[] = [
         emoji: "🍦",
         photo: "/Vanilla Dream.jpeg",
         video: null,
-        badge: null,
+        badge: { text: "Classic", bg: "#3b82f6", color: "#fff" },
         gradient: "linear-gradient(135deg, #F57F17, #E65100)",
         desc: "Madagascar vanilla bean sponge with silky buttercream frosting.",
         sizes: "500g · ₹549 | 1kg · ₹949 | 1.5kg · ₹1,349",
@@ -51,7 +51,7 @@ const cakes: Cake[] = [
         emoji: "🍓",
         photo: "/Strawberry Bliss.jpeg",
         video: "/videos/strawberry_vid.mp4",
-        badge: { text: "New", bg: "#ec4899", color: "#fff" },
+        badge: { text: "Popular", bg: "#ec4899", color: "#fff" },
         gradient: "linear-gradient(135deg, #E53935, #B71C1C)",
         desc: "Real strawberry compote, cream cheese frosting, light vanilla sponge.",
         sizes: "500g · ₹649 | 1kg · ₹1,099 | 1.5kg · ₹1,499",
@@ -119,7 +119,7 @@ const cakes: Cake[] = [
         emoji: "🍯",
         photo: "/Butterscotch Crunch.jpeg",
         video: null,
-        badge: null,
+        badge: { text: "Evergreen", bg: "#d97706", color: "#fff" },
         gradient: "linear-gradient(135deg, #FF8F00, #E65100)",
         desc: "Caramel-infused sponge layers with golden butterscotch sauce and crunchy praline bits.",
         sizes: "500g · ₹549 | 1kg · ₹949 | 1.5kg · ₹1,349",
@@ -136,7 +136,7 @@ const cakes: Cake[] = [
         emoji: "🫐",
         photo: null,
         video: "/videos/blueberry_vid.mp4",
-        badge: { text: "New", bg: "#8b5cf6", color: "#fff" },
+        badge: { text: "Fresh", bg: "#8b5cf6", color: "#fff" },
         gradient: "linear-gradient(135deg, #4A148C, #311B92)",
         desc: "Vanilla sponge layered with wild blueberry compote and tangy cream cheese frosting.",
         sizes: "500g · ₹649",
@@ -306,7 +306,7 @@ const cakes: Cake[] = [
         emoji: "🍒",
         photo: "/Black Forest.jpeg",
         video: null,
-        badge: null,
+        badge: { text: "Exotic", bg: "#9333ea", color: "#fff" },
         gradient: "linear-gradient(135deg, #3E2723, #1A1208)",
         desc: "Classic Black Forest with cherry compote, whipped cream, and dark chocolate shavings.",
         sizes: "500g · ₹599 | 1kg · ₹999 | 1.5kg · ₹1,399",
@@ -321,7 +321,7 @@ const cakes: Cake[] = [
 const heroStats = [
     { val: "8+", label: "Flavours" },
     { val: "500+", label: "Happy Orders" },
-    { val: "Same Day", label: "Delivery" },
+    { val: "Premium", label: "Ingredients" },
 ];
 
 export default function Home() {

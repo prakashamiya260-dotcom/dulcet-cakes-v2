@@ -348,6 +348,8 @@ const cakes: Cake[] = [
         features: ["Fresh Pineapple", "Whipped Cream", "Pineapple Syrup"],
         eggless: true,
         sizePrices: [{ label: "500g · ₹549", price: "₹549", unit: "500g cake" }, { label: "1kg · ₹949", price: "₹949", unit: "1kg cake" }, { label: "1.5kg · ₹1,349", price: "₹1,349", unit: "1.5kg cake" }],
+        params: ["Fresh Pineapple", "100% Eggless", "Tropical Cream"],
+    },
 ];
 
 const heroStats = [

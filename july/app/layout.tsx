@@ -7,9 +7,19 @@ const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "Dulcet Cakes | Future of Sweetness",
-    description: "Premium handcrafted cakes, perfectly baked for every occasion.",
+    description: "Taste the best cake in Patna! Dulcet Cakes is a trusted premium home baker delivering delicious, handmade, and fresh custom cakes directly to your door.",
     icons: {
         icon: "/logo-circle.png",
+    },
+    openGraph: {
+        images: [
+            {
+                url: "https://dulcetcakes.com/public/sunshine-cake.jpg", 
+                width: 1200,
+                height: 630,
+                alt: "Dulcet Cakes - Sunshine Cake",
+            },
+        ],
     },
 };
 
@@ -18,6 +28,24 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Bakery",
+        "name": "Dulcet Cakes",
+        "image": [
+            "https://dulcetcakes.com/public/sunshine-cake.jpg",
+            "https://dulcetcakes.com/public/black_forest_cake.jpg"
+        ],
+        "url": "https://dulcetcakes.com",
+        "telephone": "99999789502",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Patna",
+            "addressRegion": "Bihar",
+            "addressCountry": "IN"
+        }
+    };
+
     return (
         <html lang="en">
             <head>
@@ -30,6 +58,10 @@ export default function RootLayout({
                     })(window,document,'script','dataLayer','GTM-TKK2NDMM');
                     `}
                 </Script>
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+                />
             </head>
             <body className={outfit.className}>
                 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKK2NDMM"

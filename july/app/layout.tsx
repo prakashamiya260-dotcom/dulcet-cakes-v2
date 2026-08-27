@@ -8,6 +8,7 @@ const outfit = Outfit({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: "Dulcet Cakes | Future of Sweetness",
     description: "Taste the best cake in Patna! Dulcet Cakes is a trusted premium home baker delivering delicious, handmade, and fresh custom cakes directly to your door.",
+    keywords: ["best cake in patna", "best cake shop in patna", "cake delivery in patna", "online cake delivery in patna", "order cake online", "cake bakery near me", "customized cake in patna", "eggless cake patna"],
     icons: {
         icon: "/logo-circle.png",
     },
